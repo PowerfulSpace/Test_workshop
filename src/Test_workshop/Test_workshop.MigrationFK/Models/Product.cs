@@ -30,5 +30,10 @@ namespace Test_workshop.MigrationFK.Models
         [Display(Name = "Unit")]
         public Guid UnitId { get; set; }
         public virtual Unit Unit { get; set; } = null!;
+
+        [ForeignKey("Brand")]
+        [Display(Name = "Brand")]
+        public Guid? BrandId { get; set; }
+        public virtual Brand? Brand { get; set; }
     }
 }
