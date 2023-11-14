@@ -33,6 +33,6 @@ namespace MovieMirgations_Fl_API.Data
             });
         }
 
-
+        //https://metanit.com/sharp/entityframeworkcore/1.2.php
     }
 }

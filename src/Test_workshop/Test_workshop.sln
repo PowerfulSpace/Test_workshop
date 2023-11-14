@@ -5,7 +5,11 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_workshop.MigrationFK", "Test_workshop.MigrationFK\Test_workshop.MigrationFK.csproj", "{C39ABB2B-DF80-4285-AC1C-979DD9DFBD33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieMirgations_Fl_API", "MovieMirgations_Fl_API\MovieMirgations_Fl_API.csproj", "{223640A8-1FA9-461A-B365-24C8A1D2A486}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieMirgations_Fl_API", "MovieMirgations_Fl_API\MovieMirgations_Fl_API.csproj", "{223640A8-1FA9-461A-B365-24C8A1D2A486}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_EF", "Test_EF\Test_EF.csproj", "{E393028F-6919-4F8D-9522-9691618C5D5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_ConnectToDb", "Test_ConnectToDb\Test_ConnectToDb.csproj", "{1F61AFAA-0C41-4BD5-ABEF-5E452A11B56D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{223640A8-1FA9-461A-B365-24C8A1D2A486}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{223640A8-1FA9-461A-B365-24C8A1D2A486}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{223640A8-1FA9-461A-B365-24C8A1D2A486}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E393028F-6919-4F8D-9522-9691618C5D5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E393028F-6919-4F8D-9522-9691618C5D5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E393028F-6919-4F8D-9522-9691618C5D5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E393028F-6919-4F8D-9522-9691618C5D5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F61AFAA-0C41-4BD5-ABEF-5E452A11B56D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F61AFAA-0C41-4BD5-ABEF-5E452A11B56D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F61AFAA-0C41-4BD5-ABEF-5E452A11B56D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F61AFAA-0C41-4BD5-ABEF-5E452A11B56D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
