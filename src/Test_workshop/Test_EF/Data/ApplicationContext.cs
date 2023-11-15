@@ -18,7 +18,5 @@ namespace Test_EF.Data
             optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=Test_BaseProject_DB;Trusted_Connection=True;");
         }
 
-        //Scaffold-DbContext "Server=(localdb)\\mssqllocaldb;Database=Test_BaseProject_DB;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer
-
     }
 }

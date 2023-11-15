@@ -15,3 +15,5 @@ using (TestBaseProjectDbContext db = new TestBaseProjectDbContext())
     }
 }
 Console.ReadKey();
+
+//Scaffold-DbContext "Server=(localdb)\\mssqllocaldb;Database=Test_BaseProject_DB;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer
