@@ -1,6 +1,8 @@
 ﻿using Test_LogTo.Data;
 using Test_LogTo.Models;
 
+
+
 using (ApplicationContext db = new ApplicationContext())
 {
     User user1 = new User { Name = "Tom", Age = 33 };
@@ -20,6 +22,7 @@ using (ApplicationContext db = new ApplicationContext())
 
 
 Console.Read();
+
 
 
 //https://metanit.com/sharp/entityframeworkcore/2.3.php
