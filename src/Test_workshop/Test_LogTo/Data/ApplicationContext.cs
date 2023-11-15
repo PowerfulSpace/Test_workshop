@@ -1,11 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Test_LogTo.Models;
+using Test_LogTo.Providers;
 
 namespace Test_LogTo.Data
 {
     public class ApplicationContext : DbContext
     {
-        private readonly StreamWriter logStream = new StreamWriter("mylog.txt", true);
         public DbSet<User> Users { get; set; }
         public ApplicationContext()
         {
@@ -16,19 +18,17 @@ namespace Test_LogTo.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Test_BaseProject_DB;Trusted_Connection=True;");
-            optionsBuilder.LogTo(Console.WriteLine, new[] { DbLoggerCategory.Database.Command.Name });
+            optionsBuilder.UseLoggerFactory(MyLoggerFactory);
         }
 
-        public override void Dispose()
+        // устанавливаем фабрику логгера
+        public static readonly ILoggerFactory MyLoggerFactory = LoggerFactory.Create(builder =>
         {
-            base.Dispose();
-            logStream.Dispose();
-        }
+            builder.AddConsole();
 
-        public override async ValueTask DisposeAsync()
-        {
-            await base.DisposeAsync();
-            await logStream.DisposeAsync();
-        }
+        //    builder.AddFilter((category, level) => category == DbLoggerCategory.Database.Command.Name
+        //                && level == LogLevel.Information)
+        //.AddProvider(new MyLoggerProvider());
+        });
     }
 }

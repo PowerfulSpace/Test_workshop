@@ -1,7 +1,4 @@
-﻿
-
-
-using Test_LogTo.Data;
+﻿using Test_LogTo.Data;
 using Test_LogTo.Models;
 
 using (ApplicationContext db = new ApplicationContext())
@@ -20,4 +17,9 @@ using (ApplicationContext db = new ApplicationContext())
         Console.WriteLine($"{u.Id}.{u.Name} - {u.Age}");
     }
 }
+
+
 Console.Read();
+
+
+//https://metanit.com/sharp/entityframeworkcore/2.3.php
