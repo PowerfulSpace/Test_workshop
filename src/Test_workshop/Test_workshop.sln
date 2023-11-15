@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieMirgations_Fl_API", "M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_EF", "Test_EF\Test_EF.csproj", "{E393028F-6919-4F8D-9522-9691618C5D5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_ConnectToDb", "Test_ConnectToDb\Test_ConnectToDb.csproj", "{1F61AFAA-0C41-4BD5-ABEF-5E452A11B56D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_ConnectToDb", "Test_ConnectToDb\Test_ConnectToDb.csproj", "{1F61AFAA-0C41-4BD5-ABEF-5E452A11B56D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_LogTo", "Test_LogTo\Test_LogTo.csproj", "{D1C97BA5-A9BA-4401-9A96-917A130F954A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{1F61AFAA-0C41-4BD5-ABEF-5E452A11B56D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F61AFAA-0C41-4BD5-ABEF-5E452A11B56D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F61AFAA-0C41-4BD5-ABEF-5E452A11B56D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1C97BA5-A9BA-4401-9A96-917A130F954A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1C97BA5-A9BA-4401-9A96-917A130F954A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1C97BA5-A9BA-4401-9A96-917A130F954A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1C97BA5-A9BA-4401-9A96-917A130F954A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
