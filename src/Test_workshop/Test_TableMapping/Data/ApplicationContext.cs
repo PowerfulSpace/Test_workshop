@@ -20,9 +20,7 @@ namespace Test_TableMapping.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>()
-                .ToTable("People2", schema: "userStore2")
-                .Property(x => x.Id).HasColumnName("user_id");
+            modelBuilder.Entity<User>().HasAlternateKey(x => new { x.Passport, x.PhoneNumber });
         }
 
     }
