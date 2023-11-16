@@ -4,11 +4,13 @@ using Test_TableMapping.Models;
 
 using (ApplicationContext db = new ApplicationContext())
 {
-    var users = db.Users.ToList();
-    foreach (User u in users)
-    {
-        Console.WriteLine($"{u.Id}.{u.Name}");
-    }
+    User user1 = new User() { Name = "Tom" };
+    Console.WriteLine($"Age: {user1.Age}"); // 0
+
+    db.Users.Add(user1);
+    db.SaveChanges();
+
+    Console.WriteLine($"Age: {user1.CreatedAt}"); // 18
 }
 
 Console.ReadLine();

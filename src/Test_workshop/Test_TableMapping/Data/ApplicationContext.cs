@@ -20,9 +20,7 @@ namespace Test_TableMapping.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>()
-                .HasIndex(u => u.PhoneNumber)
-                .HasFilter("[PhoneNumber] IS NOT NULL");
+            modelBuilder.Entity<User>().Property(u => u.CreatedAt).HasDefaultValueSql("GETDATE()");
         }
 
     }
