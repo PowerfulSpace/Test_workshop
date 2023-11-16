@@ -16,5 +16,10 @@ namespace Test_Entities.Data
         {
             optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=Test_BaseProject_DB;Trusted_Connection=True;");
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Product>().Ignore(x => x.Description);
+        }
     }
 }
