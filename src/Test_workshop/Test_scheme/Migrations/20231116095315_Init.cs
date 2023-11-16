@@ -18,7 +18,7 @@ namespace Test_scheme.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Age = table.Column<int>(type: "int", nullable: false),
-                    Position = table.Column<int>(type: "int", nullable: false)
+                    IsMarried = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {

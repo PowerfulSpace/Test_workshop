@@ -11,7 +11,7 @@ using Test_scheme.Data;
 namespace Test_scheme.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20231115152434_Init")]
+    [Migration("20231116095315_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -35,12 +35,12 @@ namespace Test_scheme.Migrations
                     b.Property<int>("Age")
                         .HasColumnType("int");
 
+                    b.Property<bool>("IsMarried")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Position")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
