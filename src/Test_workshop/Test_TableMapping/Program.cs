@@ -12,3 +12,5 @@ using (ApplicationContext db = new ApplicationContext())
 }
 
 Console.ReadLine();
+
+//https://metanit.com/sharp/entityframeworkcore/2.17.php

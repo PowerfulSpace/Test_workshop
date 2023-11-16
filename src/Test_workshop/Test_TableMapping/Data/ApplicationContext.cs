@@ -20,7 +20,9 @@ namespace Test_TableMapping.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>().HasAlternateKey(x => new { x.Passport, x.PhoneNumber });
+            modelBuilder.Entity<User>()
+                .HasIndex(u => u.PhoneNumber)
+                .HasFilter("[PhoneNumber] IS NOT NULL");
         }
 
     }
