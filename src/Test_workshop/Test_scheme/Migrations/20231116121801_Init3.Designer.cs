@@ -11,8 +11,8 @@ using Test_scheme.Data;
 namespace Test_scheme.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20231116095315_Init")]
-    partial class Init
+    [Migration("20231116121801_Init3")]
+    partial class Init3
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
