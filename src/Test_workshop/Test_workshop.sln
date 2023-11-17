@@ -19,11 +19,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Entities", "Test_Entit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_TableMapping", "Test_TableMapping\Test_TableMapping.csproj", "{1C5AC599-9668-4ECD-9866-99CE6CFCE7F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Restrictions", "Test_Restrictions\Test_Restrictions.csproj", "{AEA8FFCE-7AF4-45B6-9A96-08C409532389}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Restrictions", "Test_Restrictions\Test_Restrictions.csproj", "{AEA8FFCE-7AF4-45B6-9A96-08C409532389}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Initialization_DB", "Test_Initialization_DB\Test_Initialization_DB.csproj", "{EA058933-8A69-497B-9D08-C5231F3024C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Initialization_DB", "Test_Initialization_DB\Test_Initialization_DB.csproj", "{EA058933-8A69-497B-9D08-C5231F3024C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Relationship", "Test_Relationship\Test_Relationship.csproj", "{F262441A-EBE2-4721-A024-72EDD9D4AE06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Relationship", "Test_Relationship\Test_Relationship.csproj", "{F262441A-EBE2-4721-A024-72EDD9D4AE06}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DD8565A7-F402-4C3D-8B9A-0B3A94E4D8E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -78,6 +80,16 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E393028F-6919-4F8D-9522-9691618C5D5E} = {DD8565A7-F402-4C3D-8B9A-0B3A94E4D8E6}
+		{1F61AFAA-0C41-4BD5-ABEF-5E452A11B56D} = {DD8565A7-F402-4C3D-8B9A-0B3A94E4D8E6}
+		{D1C97BA5-A9BA-4401-9A96-917A130F954A} = {DD8565A7-F402-4C3D-8B9A-0B3A94E4D8E6}
+		{3D105CE3-7770-418B-83F2-3D597BBD626C} = {DD8565A7-F402-4C3D-8B9A-0B3A94E4D8E6}
+		{61108BA8-D8BC-4FE4-A3D1-97C18221289A} = {DD8565A7-F402-4C3D-8B9A-0B3A94E4D8E6}
+		{1C5AC599-9668-4ECD-9866-99CE6CFCE7F3} = {DD8565A7-F402-4C3D-8B9A-0B3A94E4D8E6}
+		{AEA8FFCE-7AF4-45B6-9A96-08C409532389} = {DD8565A7-F402-4C3D-8B9A-0B3A94E4D8E6}
+		{EA058933-8A69-497B-9D08-C5231F3024C6} = {DD8565A7-F402-4C3D-8B9A-0B3A94E4D8E6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E4C9FBEB-29DB-4E97-BFF6-E84051CC4F5C}

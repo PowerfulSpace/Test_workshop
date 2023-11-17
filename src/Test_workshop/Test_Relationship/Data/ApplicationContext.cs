@@ -16,5 +16,14 @@ namespace Test_Relationship.Data
         {
             optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=Test_BaseProject_DB;Trusted_Connection=True;");
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>()
+            .HasOne(p => p.Company)
+            .WithMany(t => t.Users)
+            .HasForeignKey(p => p.CompanyInfoKey);
+        }
+
     }
 }
