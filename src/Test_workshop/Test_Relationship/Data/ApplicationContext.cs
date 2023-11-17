@@ -22,7 +22,8 @@ namespace Test_Relationship.Data
             modelBuilder.Entity<User>()
             .HasOne(p => p.Company)
             .WithMany(t => t.Users)
-            .HasForeignKey(p => p.CompanyInfoKey);
+            .HasForeignKey(p => p.CompanyName)
+            .HasPrincipalKey(x => x.Name);
         }
 
     }
