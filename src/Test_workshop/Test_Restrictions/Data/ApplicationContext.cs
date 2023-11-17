@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Test_Restrictions.Data.Configurations;
 using Test_Restrictions.Models;
 
 namespace Test_Restrictions.Data
@@ -21,15 +22,8 @@ namespace Test_Restrictions.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Product>()
-                .ToTable("Modiles")
-                .HasKey(x => x.Ident);
-
-            modelBuilder.Entity<Product>()
-                .Property(x => x.Name).IsRequired().HasMaxLength(30);
-
-            modelBuilder.Entity<Company>().ToTable("Manufacturers")
-               .Property(c => c.Name).IsRequired().HasMaxLength(30);
+            modelBuilder.ApplyConfiguration(new ProductConfiguration());
+            modelBuilder.ApplyConfiguration(new CompanyConfiguration());
         }
     }
 }
