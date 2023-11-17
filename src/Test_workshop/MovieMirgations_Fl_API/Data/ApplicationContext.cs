@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MovieMirgations_Fl_API.Data.Configurations;
 using MovieMirgations_Fl_API.Models;
 
 namespace MovieMirgations_Fl_API.Data
@@ -18,19 +19,10 @@ namespace MovieMirgations_Fl_API.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Producer>(x =>
-            {
-                x
-                .HasMany(a => a.Movies)
-                .WithOne(a => a.CurrentProducer);
-            });
-
-            modelBuilder.Entity<Actor>(x =>
-            {
-                x
-                .HasMany(a => a.Movies)
-                .WithMany(a => a.Actors);
-            });
+            modelBuilder.ApplyConfiguration(new ActorConfiguration());
+            modelBuilder.ApplyConfiguration(new GenreConfiguration());
+            modelBuilder.ApplyConfiguration(new MovieConfiguration());
+            modelBuilder.ApplyConfiguration(new ProducerConfiguration());
         }
 
         //https://metanit.com/sharp/entityframeworkcore/1.2.php
