@@ -6,7 +6,8 @@ namespace Test_Restrictions.Data
     public class ApplicationContext : DbContext
     {
 
-        public DbSet<User> Users { get; set; }
+        public DbSet<Company> Companies { get; set; }
+        public DbSet<Product> Products { get; set; }
         public ApplicationContext()
         {
             Database.EnsureDeleted();
@@ -20,7 +21,15 @@ namespace Test_Restrictions.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>().Property(x => x.Name).IsRequired();
+            modelBuilder.Entity<Product>()
+                .ToTable("Modiles")
+                .HasKey(x => x.Ident);
+
+            modelBuilder.Entity<Product>()
+                .Property(x => x.Name).IsRequired().HasMaxLength(30);
+
+            modelBuilder.Entity<Company>().ToTable("Manufacturers")
+               .Property(c => c.Name).IsRequired().HasMaxLength(30);
         }
     }
 }
