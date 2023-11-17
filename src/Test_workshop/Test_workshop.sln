@@ -21,6 +21,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_TableMapping", "Test_T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Restrictions", "Test_Restrictions\Test_Restrictions.csproj", "{AEA8FFCE-7AF4-45B6-9A96-08C409532389}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Initialization_DB", "Test_Initialization_DB\Test_Initialization_DB.csproj", "{EA058933-8A69-497B-9D08-C5231F3024C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Relationship", "Test_Relationship\Test_Relationship.csproj", "{F262441A-EBE2-4721-A024-72EDD9D4AE06}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{AEA8FFCE-7AF4-45B6-9A96-08C409532389}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEA8FFCE-7AF4-45B6-9A96-08C409532389}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEA8FFCE-7AF4-45B6-9A96-08C409532389}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA058933-8A69-497B-9D08-C5231F3024C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA058933-8A69-497B-9D08-C5231F3024C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA058933-8A69-497B-9D08-C5231F3024C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA058933-8A69-497B-9D08-C5231F3024C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F262441A-EBE2-4721-A024-72EDD9D4AE06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F262441A-EBE2-4721-A024-72EDD9D4AE06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F262441A-EBE2-4721-A024-72EDD9D4AE06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F262441A-EBE2-4721-A024-72EDD9D4AE06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
