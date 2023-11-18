@@ -20,10 +20,9 @@ namespace Test_Relationship.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()
-            .HasOne(p => p.Company)
-            .WithMany(t => t.Users)
-            .HasForeignKey(p => p.CompanyName)
-            .HasPrincipalKey(x => x.Name);
+                .HasOne(p => p.Company)
+                .WithMany(t => t.Users)
+                .OnDelete(DeleteBehavior.SetNull);
         }
 
     }

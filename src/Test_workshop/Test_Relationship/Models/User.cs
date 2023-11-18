@@ -7,7 +7,7 @@ namespace Test_Relationship.Models
         public int Id { get; set; }
         public string Name { get; set; }
 
-       public string CompanyName { get; set; }      // внешний ключ
+        public int? CompanyId { get; set; } // внешний ключ
         public Company Company { get; set; }    // навигационное свойство
     }
 }
