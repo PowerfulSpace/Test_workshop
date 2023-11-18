@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Relationship", "Test_R
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DD8565A7-F402-4C3D-8B9A-0B3A94E4D8E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Complex_Structure", "Test_Complex_Structure\Test_Complex_Structure.csproj", "{987F678A-0830-4C12-A545-230B66E66E05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{F262441A-EBE2-4721-A024-72EDD9D4AE06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F262441A-EBE2-4721-A024-72EDD9D4AE06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F262441A-EBE2-4721-A024-72EDD9D4AE06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{987F678A-0830-4C12-A545-230B66E66E05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{987F678A-0830-4C12-A545-230B66E66E05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{987F678A-0830-4C12-A545-230B66E66E05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{987F678A-0830-4C12-A545-230B66E66E05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,6 +96,7 @@ Global
 		{1C5AC599-9668-4ECD-9866-99CE6CFCE7F3} = {DD8565A7-F402-4C3D-8B9A-0B3A94E4D8E6}
 		{AEA8FFCE-7AF4-45B6-9A96-08C409532389} = {DD8565A7-F402-4C3D-8B9A-0B3A94E4D8E6}
 		{EA058933-8A69-497B-9D08-C5231F3024C6} = {DD8565A7-F402-4C3D-8B9A-0B3A94E4D8E6}
+		{F262441A-EBE2-4721-A024-72EDD9D4AE06} = {DD8565A7-F402-4C3D-8B9A-0B3A94E4D8E6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E4C9FBEB-29DB-4E97-BFF6-E84051CC4F5C}
