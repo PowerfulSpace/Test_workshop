@@ -27,12 +27,10 @@ using (ApplicationContext db = new ApplicationContext())
 using (ApplicationContext db = new ApplicationContext())
 {
 
-    Company company = db.Companies.FirstOrDefault();
-    db.Entry(company).Collection(t => t.Users).Load();
+    User user = db.Users.FirstOrDefault();  // получаем первого пользователя
+    db.Entry(user).Reference(x => x.Company).Load();
 
-    Console.WriteLine($"Company: {company.Name}");
-    foreach (var p in company.Users)
-        Console.WriteLine($"User: {p.Name}");
+    Console.WriteLine($"{user.Name} - {user.Company?.Name}");   // Tom - Microsoft
 }
 
 Console.WriteLine("___");
