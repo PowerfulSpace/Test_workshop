@@ -9,8 +9,8 @@ namespace Test_Relationship.Data
         public DbSet<User> Users { get; set; }
         public ApplicationContext()
         {
-            Database.EnsureDeleted();
-            Database.EnsureCreated();
+            //Database.EnsureDeleted();
+            //Database.EnsureCreated();
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -19,10 +19,10 @@ namespace Test_Relationship.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>()
-                .HasOne(p => p.Company)
-                .WithMany(t => t.Users)
-                .OnDelete(DeleteBehavior.SetNull);
+            //modelBuilder.Entity<User>()
+            //    .HasOne(p => p.Company)
+            //    .WithMany(t => t.Users)
+            //    .OnDelete(DeleteBehavior.SetNull);
         }
 
     }

@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.EntityFrameworkCore;
 using Test_Relationship.Data;
 using Test_Relationship.Models;
 
@@ -6,36 +7,47 @@ using Test_Relationship.Models;
 
 using (ApplicationContext db = new ApplicationContext())
 {
+
+    db.Database.EnsureDeleted();
+    db.Database.EnsureCreated();
+
     // добавляем начальные данные
     Company microsoft = new Company { Name = "Microsoft" };
     Company google = new Company { Name = "Google" };
     db.Companies.AddRange(microsoft, google);
-    db.SaveChanges();
+
     User tom = new User { Name = "Tom", Company = microsoft };
     User bob = new User { Name = "Bob", Company = google };
     User alice = new User { Name = "Alice", Company = microsoft };
     User kate = new User { Name = "Kate", Company = google };
     db.Users.AddRange(tom, bob, alice, kate);
-    db.SaveChanges();
 
+    db.SaveChanges();
 
     // получаем пользователей
-    var users = db.Users.ToList();
-    foreach (var user in users) Console.WriteLine($"{user.Name}");
-
-    // Удаляем первую компанию
-    var comp = db.Companies.FirstOrDefault();
-    db.Companies.Remove(comp);
-    db.SaveChanges();
-    Console.WriteLine("\nСписок пользователей после удаления компании");
-    // снова получаем пользователей
-    users = db.Users.ToList();
-    foreach (var user in users) Console.WriteLine($"{user.Name}");
+    var users = db.Users
+        .Include(u => u.Company)  // подгружаем данные по компаниям
+        .ToList();
+    foreach (var user in users)
+        Console.WriteLine($"{user.Name} - {user.Company?.Name}");
+}
+Console.WriteLine("---");
+using (ApplicationContext db = new ApplicationContext())
+{
+    //var companies = db.Companies.ToList();
+    // получаем пользователей
+    var users = db.Users
+        .Include(u => u.Company)  // подгружаем данные по компаниям
+        .ToList();
+    foreach (var user in users)
+        Console.WriteLine($"{user.Name} - {user.Company?.Name}");
 }
 
 Console.ReadKey();
 
-//https://metanit.com/sharp/entityframeworkcore/3.2.php
+//ThenInclude
+
+//https://metanit.com/sharp/entityframeworkcore/3.3.php
 
 
 
