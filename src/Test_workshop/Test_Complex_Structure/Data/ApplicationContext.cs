@@ -5,9 +5,11 @@ namespace Test_Complex_Structure.Data
 {
     public class ApplicationContext : DbContext
     {
-        public DbSet<Country> Countries { get; set; }
         public DbSet<Company> Companies { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<City> Cities { get; set; }
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<Position> Positions { get; set; }
 
         public ApplicationContext()
         {
