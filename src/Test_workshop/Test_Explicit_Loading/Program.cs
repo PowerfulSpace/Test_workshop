@@ -28,12 +28,12 @@ using (ApplicationContext db = new ApplicationContext())
 {
 
     Company company = db.Companies.FirstOrDefault();
-    db.Users.Where(p => p.CompanyId == company.Id).Load();
+    db.Entry(company).Collection(t => t.Users).Load();
 
     Console.WriteLine($"Company: {company.Name}");
     foreach (var p in company.Users)
         Console.WriteLine($"User: {p.Name}");
 }
 
-
-    Console.ReadLine();
+Console.WriteLine("___");
+Console.ReadLine();
