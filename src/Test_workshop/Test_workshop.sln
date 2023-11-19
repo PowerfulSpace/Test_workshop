@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_One_To_Many", "Test_On
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Many_To_Many", "Test_Many_To_Many\Test_Many_To_Many.csproj", "{8EAA28F1-4E8E-4399-944C-EFE756505551}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Many_To_Many2", "Test_Many_To_Many2\Test_Many_To_Many2.csproj", "{017B1005-A341-4487-A76D-43151C6FBE60}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -113,6 +115,10 @@ Global
 		{8EAA28F1-4E8E-4399-944C-EFE756505551}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EAA28F1-4E8E-4399-944C-EFE756505551}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EAA28F1-4E8E-4399-944C-EFE756505551}.Release|Any CPU.Build.0 = Release|Any CPU
+		{017B1005-A341-4487-A76D-43151C6FBE60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{017B1005-A341-4487-A76D-43151C6FBE60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{017B1005-A341-4487-A76D-43151C6FBE60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{017B1005-A341-4487-A76D-43151C6FBE60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

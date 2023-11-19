@@ -21,6 +21,9 @@ namespace Test_Many_To_Many.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Course>()
+                .HasMany(c => c.Students)
+                .WithMany(s => s.Courses);
         }
     }
 }
