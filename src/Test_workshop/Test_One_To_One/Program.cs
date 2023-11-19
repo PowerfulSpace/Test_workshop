@@ -19,44 +19,14 @@ using (ApplicationContext db = new ApplicationContext())
 
     db.SaveChanges();
 }
-
 using (ApplicationContext db = new ApplicationContext())
 {
-    foreach (User user in db.Users.Include(u => u.Profile).ToList())
+    // получим данные
+    foreach (var u in db.Users.Include(u => u.Profile).ToList())
     {
-        Console.WriteLine($"Name: {user.Profile?.Name} Age: {user.Profile?.Age}");
-        Console.WriteLine($"Login: {user.Login}  Password: {user.Password} \n");
+        Console.WriteLine($"Name: {u.Profile?.Name} Age: {u.Profile?.Age}");
+        Console.WriteLine($"Login: {u.Login}  Password: {u.Password} \n");
     }
 }
 
-Console.WriteLine();
-
-using (ApplicationContext db = new ApplicationContext())
-{
-    // удаляем первый объект User
-    User user = db.Users.FirstOrDefault();
-    if (user != null)
-    {
-        db.Users.Remove(user);
-        db.SaveChanges();
-    }
-
-    // удаляем объект UserProfile c логином login2
-    UserProfile profile = db.UserProfiles.FirstOrDefault(p => p.User.Login == "login2");
-    if (profile != null)
-    {
-        db.UserProfiles.Remove(profile);
-        db.SaveChanges();
-    }
-}
-
-
-using (ApplicationContext db = new ApplicationContext())
-{
-    foreach (User user in db.Users.Include(u => u.Profile).ToList())
-    {
-        Console.WriteLine($"Name: {user.Profile?.Name} Age: {user.Profile?.Age}");
-        Console.WriteLine($"Login: {user.Login}  Password: {user.Password} \n");
-    }
-}
 Console.ReadLine();
