@@ -31,7 +31,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Complex_Structure", "T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Explicit_Loading", "Test_Explicit_Loading\Test_Explicit_Loading.csproj", "{E71F9067-32B0-49D2-B5D0-049DF020F8C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Lazy_Loading", "Test_Lazy_Loading\Test_Lazy_Loading.csproj", "{7AE41FEF-3559-488E-9C76-3C382C16A0F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Lazy_Loading", "Test_Lazy_Loading\Test_Lazy_Loading.csproj", "{7AE41FEF-3559-488E-9C76-3C382C16A0F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_One_To_One", "Test_One_To_One\Test_One_To_One.csproj", "{6B8FB2EC-539C-4BB4-BB49-7D7DAB76581F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,6 +97,10 @@ Global
 		{7AE41FEF-3559-488E-9C76-3C382C16A0F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AE41FEF-3559-488E-9C76-3C382C16A0F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AE41FEF-3559-488E-9C76-3C382C16A0F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B8FB2EC-539C-4BB4-BB49-7D7DAB76581F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B8FB2EC-539C-4BB4-BB49-7D7DAB76581F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B8FB2EC-539C-4BB4-BB49-7D7DAB76581F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B8FB2EC-539C-4BB4-BB49-7D7DAB76581F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -110,6 +116,7 @@ Global
 		{EA058933-8A69-497B-9D08-C5231F3024C6} = {DD8565A7-F402-4C3D-8B9A-0B3A94E4D8E6}
 		{F262441A-EBE2-4721-A024-72EDD9D4AE06} = {DD8565A7-F402-4C3D-8B9A-0B3A94E4D8E6}
 		{987F678A-0830-4C12-A545-230B66E66E05} = {DD8565A7-F402-4C3D-8B9A-0B3A94E4D8E6}
+		{E71F9067-32B0-49D2-B5D0-049DF020F8C6} = {DD8565A7-F402-4C3D-8B9A-0B3A94E4D8E6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E4C9FBEB-29DB-4E97-BFF6-E84051CC4F5C}

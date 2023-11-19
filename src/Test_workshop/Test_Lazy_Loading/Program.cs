@@ -30,3 +30,5 @@ using (ApplicationContext db = new ApplicationContext())
 }
 
 Console.ReadLine();
+
+//https://metanit.com/sharp/entityframeworkcore/3.4.php
