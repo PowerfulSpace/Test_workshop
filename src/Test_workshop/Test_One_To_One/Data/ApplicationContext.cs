@@ -9,8 +9,8 @@ namespace Test_One_To_One.Data
         public DbSet<UserProfile> UserProfiles { get; set; }
         public ApplicationContext()
         {
-            Database.EnsureDeleted();
-            Database.EnsureCreated();
+            //Database.EnsureDeleted();
+            //Database.EnsureCreated();
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
