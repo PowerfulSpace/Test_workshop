@@ -35,5 +35,6 @@ namespace MovieMirgations_Fl_API.Models
         public virtual List<Actor>? Actors { get; set; }
 
         public virtual List<Genre>? Genres { get; set; }
+        public virtual List<Review>? Reviews { get; set; }
     }
 }
