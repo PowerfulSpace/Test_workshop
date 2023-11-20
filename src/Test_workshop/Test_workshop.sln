@@ -33,13 +33,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Explicit_Loading", "Te
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Lazy_Loading", "Test_Lazy_Loading\Test_Lazy_Loading.csproj", "{7AE41FEF-3559-488E-9C76-3C382C16A0F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_One_To_One", "Test_One_To_One\Test_One_To_One.csproj", "{6B8FB2EC-539C-4BB4-BB49-7D7DAB76581F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_One_To_One", "Test_One_To_One\Test_One_To_One.csproj", "{6B8FB2EC-539C-4BB4-BB49-7D7DAB76581F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_One_To_Many", "Test_One_To_Many\Test_One_To_Many.csproj", "{C2607D57-2BDA-41DD-81C7-BEDDBCE27D30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_One_To_Many", "Test_One_To_Many\Test_One_To_Many.csproj", "{C2607D57-2BDA-41DD-81C7-BEDDBCE27D30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Many_To_Many", "Test_Many_To_Many\Test_Many_To_Many.csproj", "{8EAA28F1-4E8E-4399-944C-EFE756505551}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Many_To_Many", "Test_Many_To_Many\Test_Many_To_Many.csproj", "{8EAA28F1-4E8E-4399-944C-EFE756505551}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Many_To_Many2", "Test_Many_To_Many2\Test_Many_To_Many2.csproj", "{017B1005-A341-4487-A76D-43151C6FBE60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Many_To_Many2", "Test_Many_To_Many2\Test_Many_To_Many2.csproj", "{017B1005-A341-4487-A76D-43151C6FBE60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Owner", "Test_Owner\Test_Owner.csproj", "{C5A977A6-4CD6-405F-A5AE-18988B61A8F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -119,6 +121,10 @@ Global
 		{017B1005-A341-4487-A76D-43151C6FBE60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{017B1005-A341-4487-A76D-43151C6FBE60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{017B1005-A341-4487-A76D-43151C6FBE60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5A977A6-4CD6-405F-A5AE-18988B61A8F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5A977A6-4CD6-405F-A5AE-18988B61A8F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5A977A6-4CD6-405F-A5AE-18988B61A8F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5A977A6-4CD6-405F-A5AE-18988B61A8F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
