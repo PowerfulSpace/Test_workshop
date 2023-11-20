@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Http;
 
 namespace Test_Moview.Models
 {
@@ -21,6 +22,6 @@ namespace Test_Moview.Models
         [NotMapped]
         public IFormFile ProducerPhoto { get; set; } = null!;
 
-        public virtual List<Movie>? Movies { get; set; }
+        public List<Movie> Movies { get; set; } = new List<Movie>();
     }
 }

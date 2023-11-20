@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Http;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Test_Moview.Models
@@ -30,11 +31,11 @@ namespace Test_Moview.Models
         public IFormFile MoviePhoto { get; set; } = null!;
 
         public Guid? ProducerId { get; set; }
-        public virtual Producer? CurrentProducer { get; set; }
+        public Producer? CurrentProducer { get; set; }
 
-        public virtual List<Actor>? Actors { get; set; }
+        public List<Actor> Actors { get; set; } = new List<Actor>();
 
-        public virtual List<Genre>? Genres { get; set; }
-        public virtual List<Review>? Reviews { get; set; }
+        public List<Genre> Genres { get; set; } = new List<Genre>();
+        public List<Review> Reviews { get; set; } = new List<Review>();
     }
 }
