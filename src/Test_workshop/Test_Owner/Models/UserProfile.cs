@@ -2,7 +2,6 @@
 
 namespace Test_Owner.Models
 {
-    [Owned]
     public class UserProfile
     {
         public string Name { get; set; }

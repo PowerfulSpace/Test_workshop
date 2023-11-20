@@ -20,7 +20,7 @@ namespace Test_Owner.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
+            modelBuilder.Entity<User>().OwnsOne(u => u.Profile);
         }
     }
 }
