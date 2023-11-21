@@ -13,8 +13,8 @@ namespace Test_Moview.Data
 
         public ApplicationContext()
         {
-            Database.EnsureDeleted();
-            Database.EnsureCreated();
+            //Database.EnsureDeleted();
+            //Database.EnsureCreated();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -65,62 +65,66 @@ namespace Test_Moview.Data
                .HasMany(x => x.Genres)
                .WithMany(x => x.Movies);
 
+//            Review review = new Review()
+//            {
+//                Id = Guid.NewGuid(),
+//                Text = "Не плохое кино"
+//            };
 
-            Review review = new Review()
-            {
-                Id = Guid.NewGuid(),
-                Text = "Не плохое кино"
-            };
+//            Genre genre = new Genre()
+//            {
+//                Id = Guid.NewGuid(),
+//                Name = "Комедия",
+//                Description = "Расмешить зрителя"
+//            };
+//;
+//            Producer producer = new Producer()
+//            {
+//                Id = Guid.NewGuid(),
+//                BirthDate = new DateTime(2000, 2, 15),
+//                Country = "USA",
+//                FirstName = "Ваня",
+//                LastName = "Бубликов",
+//            };
 
-            Genre genre = new Genre()
-            {
-                Id = Guid.NewGuid(),
-                Name = "Комедия",
-                Description = "Расмешить зрителя"
-            };
+//            Actor actor = new Actor()
+//            {
+//                Id = Guid.NewGuid(),
+//                BirthDate = new DateTime(2005, 3, 25),
+//                Country = "USA",
+//                FirstName = "Пашка",
+//                LastName = "Туркевич"
+//            };
 
-            Guid producerId = Guid.NewGuid();
-            Producer producer = new Producer()
-            {
-                Id = producerId,
-                BirthDate = new DateTime(2000, 2, 15),
-                Country = "USA",
-                FirstName = "Ваня",
-                LastName = "Бубликов",
-            };
+//            Movie movie = new Movie()
+//            {
+//                Id = Guid.NewGuid(),
+//                Name = "Терминатор",
+//                Country = "USA",
+//                Description = "СТрелялка с примисью коммедии",
+//                AcceptableAge = 12,
+//                FilmDuration = 150,
+//                Rating = 5,
+//                YearShown = new DateTime(2002, 5, 13)
+//            };
 
-            Actor actor = new Actor()
-            {
-                Id = Guid.NewGuid(),
-                BirthDate = new DateTime(2005, 3, 25),
-                Country = "USA",
-                FirstName = "Пашка",
-                LastName = "Туркевич"
-            };
+//            movie.CurrentProducer = producer;
+//            movie.Actors.Add(actor);
+//            movie.Genres.Add(genre);
+//            movie.Reviews.Add(review);
 
-            Movie movie = new Movie()
-            {
-                Id = Guid.NewGuid(),
-                Name = "Терминатор",
-                Country = "USA",
-                Description = "СТрелялка с примисью коммедии",
-                AcceptableAge = 12,
-                FilmDuration = 150,
-                Rating = 5,
-                YearShown = new DateTime(2002, 5, 13)
-            };
-
-            movie.CurrentProducer = producer;
-            movie.Actors.Add(actor);
-            movie.Genres.Add(genre);
-            movie.Reviews.Add(review);
+//            producer.Movies.Add(movie);
+//            actor.Movies.Add(movie);
+//            genre.Movies.Add(movie);
+//            review.Movie = movie;
 
 
-            modelBuilder.Entity<Producer>().HasData(producer);
-            modelBuilder.Entity<Actor>().HasData(actor);
-            modelBuilder.Entity<Genre>().HasData(genre);
-            modelBuilder.Entity<Review>().HasData(review);
-            modelBuilder.Entity<Movie>().HasData(movie);
+
+//            modelBuilder.Entity<Producer>().HasData(producer);
+//            modelBuilder.Entity<Actor>().HasData(actor);
+//            modelBuilder.Entity<Genre>().HasData(genre);
+//            modelBuilder.Entity<Review>().HasData(review);
+//            modelBuilder.Entity<Movie>().HasData(movie);
 
         }
     }
