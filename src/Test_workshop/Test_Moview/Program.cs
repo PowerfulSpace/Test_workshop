@@ -5,8 +5,8 @@ using Test_Moview.Models;
 
 using (ApplicationContext db = new ApplicationContext())
 {
-    db.Database.EnsureDeleted();
-    db.Database.EnsureCreated();
+    //db.Database.EnsureDeleted();
+    //db.Database.EnsureCreated();
 
     Review review = new Review()
     {
