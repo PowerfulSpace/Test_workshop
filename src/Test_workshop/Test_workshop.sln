@@ -41,9 +41,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Many_To_Many", "Test_M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Many_To_Many2", "Test_Many_To_Many2\Test_Many_To_Many2.csproj", "{017B1005-A341-4487-A76D-43151C6FBE60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Owner", "Test_Owner\Test_Owner.csproj", "{C5A977A6-4CD6-405F-A5AE-18988B61A8F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Owner", "Test_Owner\Test_Owner.csproj", "{C5A977A6-4CD6-405F-A5AE-18988B61A8F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Moview", "Test_Moview\Test_Moview.csproj", "{F11C21E0-80F2-4568-911C-ACDA3BBAB011}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Moview", "Test_Moview\Test_Moview.csproj", "{F11C21E0-80F2-4568-911C-ACDA3BBAB011}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_TPH", "Test_TPH\Test_TPH.csproj", "{0D1D4CD8-9B4B-4635-BA5B-B2CB905DF787}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -131,6 +133,10 @@ Global
 		{F11C21E0-80F2-4568-911C-ACDA3BBAB011}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F11C21E0-80F2-4568-911C-ACDA3BBAB011}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F11C21E0-80F2-4568-911C-ACDA3BBAB011}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D1D4CD8-9B4B-4635-BA5B-B2CB905DF787}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D1D4CD8-9B4B-4635-BA5B-B2CB905DF787}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D1D4CD8-9B4B-4635-BA5B-B2CB905DF787}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D1D4CD8-9B4B-4635-BA5B-B2CB905DF787}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
