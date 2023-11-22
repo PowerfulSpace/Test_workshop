@@ -24,17 +24,14 @@ using (ApplicationContext db = new ApplicationContext())
 
 using (ApplicationContext db = new ApplicationContext())
 {
-    db.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
-
-    var user = db.Users.FirstOrDefault();
-    user.Age = 22;
-    db.SaveChanges();
-
     var users = db.Users.ToList();
-    foreach (var p in users)
-        Console.WriteLine($"{p.Name} ({p.Age})");
-}
 
+    foreach (var u in users)
+        Console.WriteLine($"{u.Name} ({u.Age})");
+
+    int count = db.ChangeTracker.Entries().Count();
+    Console.WriteLine($"{count}");
+}
 
 
 Console.ReadLine();
