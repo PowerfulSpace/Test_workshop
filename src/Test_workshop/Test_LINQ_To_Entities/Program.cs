@@ -27,15 +27,9 @@ using Test_LINQ_To_Entities.Models;
 using (ApplicationContext db = new ApplicationContext())
 {
 
-    var users = db.Users.Join(db.Companies,
-        u => u.CompanyId, // свойство-селектор объекта из первого набора
-        c => c.Id, // свойство-селектор объекта из второго набора
-        (u, c) => new // результат
-        {
-            Name = u.Name,
-            Company = c.Name,
-            Age = u.Age
-        });
+    var users = from u in db.Users
+                join c in db.Companies on u.CompanyId equals c.Id
+                select new { Name = u.Name, Company = c.Name, Age = u.Age };
 
     foreach (var u in users)
         Console.WriteLine($"{u.Name} ({u.Company}) - {u.Age}");
