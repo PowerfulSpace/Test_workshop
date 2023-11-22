@@ -24,9 +24,8 @@ using (ApplicationContext db = new ApplicationContext())
 
 using (ApplicationContext db = new ApplicationContext())
 {
-    var users = db.Users.Where(u => u.Age < 30)
-        .Union(db.Users.Where(u => u.Name.Contains("Tom")));
-
+    var users = db.Users.Where(u => u.Age > 30)
+        .Intersect(db.Users.Where(u => u.Name.Contains("Tom")));
     foreach (var user in users)
         Console.WriteLine(user.Name);
 }
