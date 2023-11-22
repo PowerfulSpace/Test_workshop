@@ -1,4 +1,5 @@
-﻿using Test_LINQ_To_Entities.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using Test_LINQ_To_Entities.Data;
 using Test_LINQ_To_Entities.Models;
 
 using (ApplicationContext db = new ApplicationContext())
@@ -21,16 +22,19 @@ using (ApplicationContext db = new ApplicationContext())
 }
 
 
-
 using (ApplicationContext db = new ApplicationContext())
 {
-    var selector1 = db.Users.Where(u => u.Age > 30); // 
-    var selector2 = db.Users.Where(u => u.Name.Contains("Tom")); // Samsung Galaxy S8, Samsung Galaxy S7
-    var users = selector1.Except(selector2); // результат -  iUser 6S
+    var user = db.Users.AsNoTracking().FirstOrDefault();
+    user.Age = 18;
+    db.SaveChanges();
 
-    foreach (var user in users)
-        Console.WriteLine(user.Name);
+    var users = db.Users.AsNoTracking().ToList();
+    foreach (var u in users)
+        Console.WriteLine($"{u.Name} ({u.Age})");
 }
+
+
+
 Console.ReadLine();
 
-//https://metanit.com/sharp/entityframeworkcore/5.2.php
+//https://metanit.com/sharp/entityframeworkcore/5.5.php
