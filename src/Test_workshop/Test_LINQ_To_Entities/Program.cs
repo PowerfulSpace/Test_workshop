@@ -23,12 +23,12 @@ using (ApplicationContext db = new ApplicationContext())
 }
 using (ApplicationContext db = new ApplicationContext())
 {
-    var users = await db.Users
-                        .Include(p => p.Company)
-                        .Where(p => p.CompanyId == 1)
-                        .ToListAsync();     // асинхронное получение данных
-
-    foreach (var user in users)
-        Console.WriteLine($"{user.Name} ({user.Age}) - {user.Company.Name}");
+    var users = (from user in db.Users
+                 where user.Company.Name == "Google"
+                 select user).ToList();
+    foreach (User user in users)
+        Console.WriteLine($"{user.Name} ({user.Age})");
 }
 Console.ReadLine();
+
+//https://metanit.com/sharp/entityframeworkcore/5.2.php
