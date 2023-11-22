@@ -1,4 +1,5 @@
 ﻿
+
 using Microsoft.EntityFrameworkCore;
 using Test_LINQ_To_Entities.Data;
 using Test_LINQ_To_Entities.Models;
@@ -23,9 +24,15 @@ using Test_LINQ_To_Entities.Models;
 //}
 using (ApplicationContext db = new ApplicationContext())
 {
-    var users = db.Users.Where(p => EF.Functions.Like(p.Name, "%Tom%"));
-    foreach (User user in users)
-        Console.WriteLine($"{user.Name} ({user.Age})");
+
+    var users = db.Users.Select(p => new Model
+    {
+        Name = p.Name,
+        Age = p.Age,
+        Company = p.Company.Name
+    });
+    foreach (var user in users)
+        Console.WriteLine($"{user.Name} ({user.Age}) - {user.Company}");
 }
 
 
