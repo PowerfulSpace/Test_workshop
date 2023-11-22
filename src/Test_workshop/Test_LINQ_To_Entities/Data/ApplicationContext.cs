@@ -8,6 +8,7 @@ namespace Test_LINQ_To_Entities.Data
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Company> Companies { get; set; }
+        public DbSet<Country> Countries { get; set; }
         public ApplicationContext()
         {
             //Database.EnsureDeleted();
