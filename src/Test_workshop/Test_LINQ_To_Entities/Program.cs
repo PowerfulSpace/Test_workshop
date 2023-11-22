@@ -24,12 +24,13 @@ using (ApplicationContext db = new ApplicationContext())
 
 using (ApplicationContext db = new ApplicationContext())
 {
-    var users = db.Users.Where(u => u.Age > 30)
-        .Intersect(db.Users.Where(u => u.Name.Contains("Tom")));
+    var selector1 = db.Users.Where(u => u.Age > 30); // 
+    var selector2 = db.Users.Where(u => u.Name.Contains("Tom")); // Samsung Galaxy S8, Samsung Galaxy S7
+    var users = selector1.Except(selector2); // результат -  iUser 6S
+
     foreach (var user in users)
         Console.WriteLine(user.Name);
 }
-
 Console.ReadLine();
 
 //https://metanit.com/sharp/entityframeworkcore/5.2.php
