@@ -51,7 +51,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_TPT", "Test_TPT\Test_T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_LINQ_To_Entities", "Test_LINQ_To_Entities\Test_LINQ_To_Entities.csproj", "{23E67E82-B433-4744-96F5-AB7C8B0B8046}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisignProject", "DisignProject\DisignProject.csproj", "{6AD56854-5F2E-4F83-846D-369FDEDAC416}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DisignProject", "DisignProject\DisignProject.csproj", "{6AD56854-5F2E-4F83-846D-369FDEDAC416}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
