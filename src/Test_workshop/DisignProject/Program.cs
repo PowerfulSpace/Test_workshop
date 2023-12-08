@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using DisignProject.Data;
+using DisignProject.Interfaces;
+using DisignProject.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<ApplicationContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddScoped<IMovie, MovieRepository>();
+builder.Services.AddScoped<IGenre, GenreRepository>();
 
 builder.Services.AddControllersWithViews();
 

@@ -30,11 +30,23 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">
+                        <span class="btn btn-sm btn-outline-primary">
+                            <i class="bi bi-pencil" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <a asp-action="Details" asp-route-id="@item.Id">
+                        <span class="btn btn-sm btn-outline-dark">
+                            <i class="bi bi-circle" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <a asp-action="Delete" asp-route-id="@item.Id">
+                        <span class="btn btn-sm btn-outline-danger">
+                            <i class="bi bi-x-lg" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                </td>
         </tr>
 }
     </tbody>
