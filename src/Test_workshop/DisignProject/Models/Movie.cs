@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DisignProject.Models
 {
@@ -10,5 +12,8 @@ namespace DisignProject.Models
         public string Name { get; set; } = null!;
 
         public List<Genre> Genres { get; set; } = new List<Genre>();
+
+        [NotMapped]
+        public List<string> GenresString { get; set; } = new List<string>();
     }
 }
