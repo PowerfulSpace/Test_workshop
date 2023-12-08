@@ -25,7 +25,7 @@ namespace DisignProject.Repositories
         {
             var item = await _context.Movies.Include(x => x.Genres).FirstOrDefaultAsync(x => x.Id == id);
 
-            return item;
+            return item!;
         }
 
 

@@ -1,43 +1,72 @@
 ﻿using DisignProject.Interfaces;
 using DisignProject.Models;
+using DisignProject.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace DisignProject.Repositories
 {
     public class GenreRepository : IGenre
     {
-        public Task<Genre> DeleteAsync(Genre item)
+
+        private readonly ApplicationContext _context;
+        public GenreRepository(ApplicationContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
         }
 
-        public Task<Genre> EditAsync(Genre item)
+        public async Task<List<Genre>> GetItemsAsync()
         {
-            throw new NotImplementedException();
+            List<Genre> items = await _context.Genres.Include(x => x.Movies).ToListAsync();
+
+            return items;
         }
 
-        public Task<Genre> GetItemAsync(Guid id)
+        public async Task<Genre> GetItemAsync(Guid id)
         {
-            throw new NotImplementedException();
+            var item = await _context.Genres.Include(x => x.Movies).FirstOrDefaultAsync(x => x.Id == id);
+
+            return item!;
         }
 
-        public Task<List<Genre>> GetItemsAsync()
-        {
-            throw new NotImplementedException();
-        }
 
-        public Task<Genre> GreateAsync(Genre item)
+
+        public async Task<Genre> GreateAsync(Genre item)
         {
-            throw new NotImplementedException();
+            await _context.Genres.AddAsync(item);
+            await _context.SaveChangesAsync();
+            return item;
+        }
+        public async Task<Genre> EditAsync(Genre item)
+        {
+            _context.Genres.Attach(item);
+            _context.Entry(item).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return item;
+        }
+        public async Task<Genre> DeleteAsync(Genre item)
+        {
+            _context.Genres.Attach(item);
+            _context.Entry(item).State = EntityState.Deleted;
+            await _context.SaveChangesAsync();
+            return item;
         }
 
         public bool IsItemNameExists(string name)
         {
-            throw new NotImplementedException();
+            int ct = _context.Genres.Where(x => x.Name.ToLower() == name.ToLower()).Count();
+            if (ct > 0)
+                return true;
+            else
+                return false;
         }
 
         public bool IsItemNameExists(string name, Guid id)
         {
-            throw new NotImplementedException();
+            int ct = _context.Genres.Where(x => x.Name.ToLower() == name.ToLower() && x.Id != id).Count();
+            if (ct > 0)
+                return true;
+            else
+                return false;
         }
     }
 }
