@@ -1,43 +1,72 @@
-﻿using DisignProject.Interfaces;
+﻿using DisignProject.Data;
+using DisignProject.Interfaces;
 using DisignProject.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace DisignProject.Repositories
 {
     public class MovieRepository : IMovie
     {
-        public Task<Movie> DeleteAsync(Movie item)
+
+        private readonly ApplicationContext _context;
+        public MovieRepository(ApplicationContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
         }
 
-        public Task<Movie> EditAsync(Movie item)
+        public async Task<List<Movie>> GetItemsAsync()
         {
-            throw new NotImplementedException();
+            List<Movie>  items = await _context.Movies.Include(x => x.Genres).ToListAsync();
+
+            return items;
         }
 
-        public Task<Movie> GetItemAsync(Guid id)
+        public async Task<Movie> GetItemAsync(Guid id)
         {
-            throw new NotImplementedException();
+            var item = await _context.Movies.Include(x => x.Genres).FirstOrDefaultAsync(x => x.Id == id);
+
+            return item;
         }
 
-        public Task<List<Movie>> GetItemsAsync()
-        {
-            throw new NotImplementedException();
-        }
 
-        public Task<Movie> GreateAsync(Movie item)
+
+        public async Task<Movie> GreateAsync(Movie item)
         {
-            throw new NotImplementedException();
+            await _context.Movies.AddAsync(item);
+            await _context.SaveChangesAsync();
+            return item;
+        }
+        public async Task<Movie> EditAsync(Movie item)
+        {
+            _context.Movies.Attach(item);
+            _context.Entry(item).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return item;
+        }
+        public async Task<Movie> DeleteAsync(Movie item)
+        {
+            _context.Movies.Attach(item);
+            _context.Entry(item).State = EntityState.Deleted;
+            await _context.SaveChangesAsync();
+            return item;
         }
 
         public bool IsItemNameExists(string name)
         {
-            throw new NotImplementedException();
+            int ct = _context.Movies.Where(x => x.Name.ToLower() == name.ToLower()).Count();
+            if (ct > 0)
+                return true;
+            else
+                return false;
         }
 
         public bool IsItemNameExists(string name, Guid id)
         {
-            throw new NotImplementedException();
+            int ct = _context.Movies.Where(x => x.Name.ToLower() == name.ToLower() && x.Id != id).Count();
+            if (ct > 0)
+                return true;
+            else
+                return false;
         }
     }
 }
