@@ -31,9 +31,23 @@ namespace Test_Movie.Controllers
             return View(movie);
         }
 
+        private async Task<Movie> AddGeneresAsync(Movie movie, List<Guid> genres)
+        {
+            List<Genre> allGenres = await _genreRepository.GetItemsAsync();
+            List<Genre> genresList = new List<Genre>();
+
+
+            foreach (var genre in genres)
+            {
+                genresList.AddRange(allGenres.Where(x => x.Id == genre).ToList());
+            }
+            movie.Genres.AddRange(genresList);
+
+            return movie;
+        }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Movie movie)
+        public async Task<IActionResult> Create(Movie movie, List<Guid> genres)
         {
             var bolret = false;
             string errMessage = "";
@@ -45,6 +59,12 @@ namespace Test_Movie.Controllers
 
                 if (errMessage == "")
                 {
+
+                    if (genres != null)
+                    {
+                        movie = await AddGeneresAsync(movie, genres);
+                    }
+
                     movie = await _movieRepository.GreateAsync(movie);
                     bolret = true;
                 }
