@@ -32,21 +32,6 @@ namespace Test_Movie.Controllers
             return View(movie);
         }
 
-        private async Task<Movie> AddGeneresAsync(Movie movie, List<Guid> genres)
-        {
-            List<Genre> allGenres = await _genreRepository.GetItemsAsync();
-            List<Genre> genresList = new List<Genre>();
-
-
-            foreach (var genre in genres)
-            {
-                genresList.AddRange(allGenres.Where(x => x.Id == genre).ToList());
-            }
-            movie.Genres.AddRange(genresList);
-
-            return movie;
-        }
-
         [HttpPost]
         public async Task<IActionResult> Create(Movie movie, List<Guid> genres)
         {
@@ -126,6 +111,12 @@ namespace Test_Movie.Controllers
 
                 if (errMessage == "")
                 {
+
+                    if (genres != null)
+                    {
+                        movie = await EditGeneresAsync(movie, genres);
+                    }
+
                     movie = await _movieRepository.EditAsync(movie);
                     bolret = true;
                 }
@@ -136,7 +127,7 @@ namespace Test_Movie.Controllers
             if (bolret == false)
             {
                 ModelState.AddModelError("", errMessage);
-                await PopulateViewBagsAsync();
+                await PopulateViewBagsAsync(movie.Genres.Select(x => x.Id).ToList());
                 return View(movie);
             }
             else { return RedirectToAction(nameof(Index)); }
@@ -224,6 +215,37 @@ namespace Test_Movie.Controllers
 
 
             return listIItems;
+        }
+
+
+        private async Task<Movie> AddGeneresAsync(Movie movie, List<Guid> genres)
+        {
+            List<Genre> allGenres = await _genreRepository.GetItemsAsync();
+            List<Genre> genresList = new List<Genre>();
+
+
+            foreach (var genre in genres)
+            {
+                genresList.AddRange(allGenres.Where(x => x.Id == genre).ToList());
+            }
+            movie.Genres.AddRange(genresList);
+
+            return movie;
+        }
+
+        private async Task<Movie> EditGeneresAsync(Movie movie, List<Guid> genres)
+        {
+            List<Genre> allGenres = await _genreRepository.GetItemsAsync();
+            List<Genre> genresList = new List<Genre>();
+
+
+            foreach (var genre in genres)
+            {
+                genresList.AddRange(allGenres.Where(x => x.Id == genre).ToList());
+            }
+            movie.Genres = genresList;
+
+            return movie;
         }
 
     }
