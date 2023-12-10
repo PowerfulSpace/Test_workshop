@@ -63,7 +63,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Difficult_Multiselect"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Difficult_Multiselect_Extended", "Test_Difficult_Multiselect_Extended\Test_Difficult_Multiselect_Extended.csproj", "{3F2B3E7D-F82B-4764-8EE8-9258A04AF1DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Movie_Progect", "Test_Movie_Progect\Test_Movie_Progect.csproj", "{F8C2A862-FE82-44BC-888A-B4265D127139}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Movie_Progect", "Test_Movie_Progect\Test_Movie_Progect.csproj", "{F8C2A862-FE82-44BC-888A-B4265D127139}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Movie", "Test_Movie\Test_Movie.csproj", "{353E4B31-7F9B-4294-BDFA-87FBCB0159CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -191,6 +193,10 @@ Global
 		{F8C2A862-FE82-44BC-888A-B4265D127139}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8C2A862-FE82-44BC-888A-B4265D127139}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8C2A862-FE82-44BC-888A-B4265D127139}.Release|Any CPU.Build.0 = Release|Any CPU
+		{353E4B31-7F9B-4294-BDFA-87FBCB0159CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{353E4B31-7F9B-4294-BDFA-87FBCB0159CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{353E4B31-7F9B-4294-BDFA-87FBCB0159CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{353E4B31-7F9B-4294-BDFA-87FBCB0159CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
