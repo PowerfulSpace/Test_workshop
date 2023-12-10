@@ -1,4 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using Test_Movie_Progect.Data;
+using Test_Movie_Progect.Interfaces;
+using Test_Movie_Progect.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<ApplicationContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IMovie, MovieRepository>();
+builder.Services.AddScoped<IGenre, GenreRepository>();
 
 builder.Services.AddControllersWithViews();
 
