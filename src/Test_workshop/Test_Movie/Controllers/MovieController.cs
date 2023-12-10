@@ -2,6 +2,7 @@
 using Test_Movie.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Collections.Generic;
 
 namespace Test_Movie.Controllers
 {
@@ -101,7 +102,7 @@ namespace Test_Movie.Controllers
         {
             var movie = await _movieRepository.GetItemAsync(id);
 
-            await PopulateViewBagsAsync();
+            await PopulateViewBagsAsync(movie.Genres.Select(x => x.Id).ToList());
 
             if (movie != null)
             {
@@ -113,7 +114,7 @@ namespace Test_Movie.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Edit(Movie movie)
+        public async Task<IActionResult> Edit(Movie movie, List<Guid> genres)
         {
             var bolret = false;
             string errMessage = "";
@@ -173,9 +174,17 @@ namespace Test_Movie.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private async Task PopulateViewBagsAsync()
+        private async Task PopulateViewBagsAsync(List<Guid> genersId = null!)
         {
-            ViewBag.Genres = await GetGenresAsync();
+            if (genersId == null)
+            {
+                ViewBag.Genres = await GetGenresAsync();
+            }
+            else
+            {
+                ViewBag.Genres = await GetGenresAsync(genersId);
+            }
+           
         }
 
         private async Task<List<SelectListItem>> GetGenresAsync()
@@ -200,6 +209,22 @@ namespace Test_Movie.Controllers
             return listIItems;
         }
 
+        private async Task<List<SelectListItem>> GetGenresAsync(List<Guid> genersId)
+        {
+            List<SelectListItem> listIItems = new List<SelectListItem>();
+
+            var items = await _genreRepository.GetItemsAsync();
+
+            listIItems = items.Select(x => new SelectListItem()
+            {
+                Text = x.Name,
+                Value = x.Id.ToString(),
+                Selected = genersId.Contains(x.Id)
+            }).ToList();
+
+
+            return listIItems;
+        }
 
     }
 }
