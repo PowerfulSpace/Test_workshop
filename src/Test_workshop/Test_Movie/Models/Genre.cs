@@ -1,4 +1,6 @@
-﻿namespace Test_Movie.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Test_Movie.Models
 {
     public class Genre
     {

@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Test_Movie.Models
 {
@@ -12,7 +11,5 @@ namespace Test_Movie.Models
 
         public List<Genre> Genres { get; set; } = new List<Genre>();
 
-        [NotMapped]
-        public List<string> GenresString { get; set; } = new List<string>();
     }
 }

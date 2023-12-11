@@ -127,7 +127,7 @@ namespace Test_Movie.Controllers
             if (bolret == false)
             {
                 ModelState.AddModelError("", errMessage);
-                await PopulateViewBagsAsync(movie.Genres.Select(x => x.Id).ToList());
+                await PopulateViewBagsAsync(genres);
                 return View(movie);
             }
             else { return RedirectToAction(nameof(Index)); }
@@ -243,7 +243,7 @@ namespace Test_Movie.Controllers
             {
                 genresList.AddRange(allGenres.Where(x => x.Id == genre).ToList());
             }
-            movie.Genres = genresList;
+            movie.Genres.AddRange(genresList);
 
             return movie;
         }
