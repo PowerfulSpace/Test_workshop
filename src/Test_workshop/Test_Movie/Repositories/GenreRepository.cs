@@ -28,8 +28,6 @@ namespace Test_Movie.Repositories
             return item!;
         }
 
-
-
         public async Task<Genre> GreateAsync(Genre item)
         {
             await _context.Genres.AddAsync(item);
