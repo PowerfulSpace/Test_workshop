@@ -36,6 +36,12 @@ namespace Test_Movie.Repositories
             await _context.SaveChangesAsync();
             return item;
         }
+
+
+        //Найти все жанры которые удулил
+        //Найти все жанры которые добивил
+        //И по коллекции сначала удалить а потом добавить
+
         public async Task<Movie> EditAsync(Movie item)
         {
             var count = _context.ChangeTracker.Entries();
@@ -45,6 +51,9 @@ namespace Test_Movie.Repositories
             await _context.SaveChangesAsync();
             return item;
         }
+
+
+
         public async Task<Movie> DeleteAsync(Movie item)
         {
             _context.Movies.Attach(item);
