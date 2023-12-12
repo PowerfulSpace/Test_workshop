@@ -16,7 +16,7 @@ namespace Test_Movie.Repositories
 
         public async Task<List<Movie>> GetItemsAsync()
         {
-            List<Movie>  items = await _context.Movies.Include(x => x.Genres).ToListAsync();
+            List<Movie>  items = await _context.Movies.AsNoTracking().Include(x => x.Genres).ToListAsync();
 
             return items;
         }
@@ -38,6 +38,8 @@ namespace Test_Movie.Repositories
         }
         public async Task<Movie> EditAsync(Movie item)
         {
+            var count = _context.ChangeTracker.Entries().Count();
+
             _context.Movies.Attach(item);
             _context.Entry(item).State = EntityState.Modified;
             await _context.SaveChangesAsync();
