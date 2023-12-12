@@ -16,14 +16,14 @@ namespace Test_Movie.Repositories
 
         public async Task<List<Genre>> GetItemsAsync()
         {
-            List<Genre> items = await _context.Genres.Include(x => x.Movies).ToListAsync();
+            List<Genre> items = await _context.Genres.ToListAsync();
 
             return items;
         }
 
         public async Task<Genre> GetItemAsync(Guid id)
         {
-            var item = await _context.Genres.Include(x => x.Movies).FirstOrDefaultAsync(x => x.Id == id);
+            var item = await _context.Genres.FirstOrDefaultAsync(x => x.Id == id);
 
             return item!;
         }

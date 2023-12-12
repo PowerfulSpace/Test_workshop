@@ -38,7 +38,7 @@ namespace Test_Movie.Repositories
         }
         public async Task<Movie> EditAsync(Movie item)
         {
-            var count = _context.ChangeTracker.Entries().Count();
+            var count = _context.ChangeTracker.Entries();
 
             _context.Movies.Attach(item);
             _context.Entry(item).State = EntityState.Modified;
