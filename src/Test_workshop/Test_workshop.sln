@@ -69,6 +69,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Movie", "Test_Movie\Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Movie_Many_To_Many", "Test_Movie_Many_To_Many\Test_Movie_Many_To_Many.csproj", "{F156FB8C-21C0-4231-9E89-8FA62CB6B28A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Many_To_Many_3", "Test_Many_To_Many_3\Test_Many_To_Many_3.csproj", "{8BC946D6-55A3-486E-9959-EE9CF95423DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -203,6 +205,10 @@ Global
 		{F156FB8C-21C0-4231-9E89-8FA62CB6B28A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F156FB8C-21C0-4231-9E89-8FA62CB6B28A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F156FB8C-21C0-4231-9E89-8FA62CB6B28A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BC946D6-55A3-486E-9959-EE9CF95423DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BC946D6-55A3-486E-9959-EE9CF95423DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BC946D6-55A3-486E-9959-EE9CF95423DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BC946D6-55A3-486E-9959-EE9CF95423DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
