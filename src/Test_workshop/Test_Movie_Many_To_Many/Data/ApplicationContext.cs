@@ -27,13 +27,13 @@ namespace Test_Movie_Many_To_Many.Data
                 .WithMany(s => s.Movies)
                 .UsingEntity<MovieGenre>(
                     j => j
-                        .HasOne(mg => mg.Movie)
-                        .WithMany(m => m.MovieGenres)
-                        .HasForeignKey(mg => mg.MovieId),
-                    j => j
                         .HasOne(mg => mg.Genre)
-                        .WithMany(g => g.MovieGenres)
+                        .WithMany(m => m.MovieGenres)
                         .HasForeignKey(mg => mg.GenreId),
+                    j => j
+                        .HasOne(mg => mg.Movie)
+                        .WithMany(g => g.MovieGenres)
+                        .HasForeignKey(mg => mg.MovieId),
                     j =>
                     {
                         j.HasKey(x => new { x.MovieId, x.GenreId });
