@@ -88,8 +88,9 @@ namespace Test_Movie.Controllers
         {
             var movie = await _movieRepository.GetItemAsync(id);
 
-            TempData["Movie"] = movie;
-            TempData.Keep("Movie");
+            
+            //TempData["Movie"] = movie;
+            //TempData.Keep("Movie");
 
             await PopulateViewBagsAsync(movie.Genres.Select(x => x.Id).ToList());
 
@@ -105,7 +106,7 @@ namespace Test_Movie.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(Movie movie, List<Guid> genres)
         {
-            var a = TempData["Movie"];
+            //var a = TempData["Movie"];
 
             var bolret = false;
             string errMessage = "";

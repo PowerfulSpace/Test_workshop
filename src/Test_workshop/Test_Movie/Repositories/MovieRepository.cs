@@ -52,8 +52,6 @@ namespace Test_Movie.Repositories
             return item;
         }
 
-        //Ошибка в Movie movieBeforeChange = await GetItemAsync(movie.Id); . Т.к id используется повторно
-        //Думаю как обойти
         public async Task<Movie> EditGenresAsync(Movie movie, List<Guid> genres)
         {
             //Выбираем фильм до изменения, вытакскиваем все жанры которые были изначально
@@ -79,9 +77,9 @@ namespace Test_Movie.Repositories
             //Выбираю жанры которые нужно будет добавить в коллекию к фильму
             List<Genre> genresToAdd = genreAfterChange.Except(genresUnchanged).ToList();
 
-            
 
-            if(genresToDelete != null)
+            movie = movieBeforeChange;
+            if (genresToDelete != null)
             {
                 foreach (var item in genresToDelete)
                 {
