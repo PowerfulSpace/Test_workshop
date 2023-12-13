@@ -7,5 +7,8 @@ namespace Test_Movie.Interfaces
     {
         public bool IsItemNameExists(string name);
         public bool IsItemNameExists(string name, Guid id);
+
+
+        public Task<Movie> EditGenresAsync(Movie movie, List<Guid> genres);
     }
 }

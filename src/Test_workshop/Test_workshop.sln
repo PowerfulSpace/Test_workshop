@@ -67,9 +67,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Movie_Progect", "Test_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Movie", "Test_Movie\Test_Movie.csproj", "{353E4B31-7F9B-4294-BDFA-87FBCB0159CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Movie_Many_To_Many", "Test_Movie_Many_To_Many\Test_Movie_Many_To_Many.csproj", "{F156FB8C-21C0-4231-9E89-8FA62CB6B28A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Movie_Many_To_Many", "Test_Movie_Many_To_Many\Test_Movie_Many_To_Many.csproj", "{F156FB8C-21C0-4231-9E89-8FA62CB6B28A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Many_To_Many_3", "Test_Many_To_Many_3\Test_Many_To_Many_3.csproj", "{8BC946D6-55A3-486E-9959-EE9CF95423DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Many_To_Many_3", "Test_Many_To_Many_3\Test_Many_To_Many_3.csproj", "{8BC946D6-55A3-486E-9959-EE9CF95423DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -237,6 +237,7 @@ Global
 		{0D1D4CD8-9B4B-4635-BA5B-B2CB905DF787} = {DD8565A7-F402-4C3D-8B9A-0B3A94E4D8E6}
 		{67E98EB7-6648-490E-BCBF-19897DE533D9} = {DD8565A7-F402-4C3D-8B9A-0B3A94E4D8E6}
 		{23E67E82-B433-4744-96F5-AB7C8B0B8046} = {DD8565A7-F402-4C3D-8B9A-0B3A94E4D8E6}
+		{8BC946D6-55A3-486E-9959-EE9CF95423DC} = {DD8565A7-F402-4C3D-8B9A-0B3A94E4D8E6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E4C9FBEB-29DB-4E97-BFF6-E84051CC4F5C}

@@ -52,6 +52,26 @@ using (ApplicationContext db = new ApplicationContext())
         movie1.Genres.Add(genr2);
         db.SaveChanges();
     }
+
+
+    Movie movie2 = db.Movies.Include(s => s.Genres).FirstOrDefault(s => s.Name == "Терминатор 5")!;
+
+    Genre genr3 = db.Genres.FirstOrDefault(c => c.Name == "аниме")!;
+    Genre genr4 = db.Genres.FirstOrDefault(c => c.Name == "научный")!;
+    Genre genr5 = db.Genres.FirstOrDefault(c => c.Name == "военный")!;
+    Genre genr6 = db.Genres.FirstOrDefault(c => c.Name == "исторический")!;
+    Genre genr7 = db.Genres.FirstOrDefault(c => c.Name == "мелодрама")!;
+
+    if (movie2 != null)
+    {
+        movie2.Genres.Add(genr3);
+        movie2.Genres.Add(genr4);
+        movie2.Genres.Add(genr5);
+        movie2.Genres.Add(genr6);
+        movie2.Genres.Add(genr7);
+        db.SaveChanges();
+    }
+
 }
 
 

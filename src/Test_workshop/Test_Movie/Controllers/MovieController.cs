@@ -3,6 +3,7 @@ using Test_Movie.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
+using Humanizer;
 
 namespace Test_Movie.Controllers
 {
@@ -87,6 +88,9 @@ namespace Test_Movie.Controllers
         {
             var movie = await _movieRepository.GetItemAsync(id);
 
+            TempData["Movie"] = movie;
+            TempData.Keep("Movie");
+
             await PopulateViewBagsAsync(movie.Genres.Select(x => x.Id).ToList());
 
             if (movie != null)
@@ -101,6 +105,8 @@ namespace Test_Movie.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(Movie movie, List<Guid> genres)
         {
+            var a = TempData["Movie"];
+
             var bolret = false;
             string errMessage = "";
 
@@ -112,12 +118,14 @@ namespace Test_Movie.Controllers
                 if (errMessage == "")
                 {
 
-                    if (genres != null)
-                    {
-                        movie = await EditGeneresAsync(movie, genres);
-                    }
+                    //if (genres != null)
+                    //{
+                    //    movie = await EditGeneresAsync(movie, genres);
+                    //}
 
-                    movie = await _movieRepository.EditAsync(movie);
+                    //movie = await _movieRepository.EditAsync(movie);
+
+                    movie = await _movieRepository.EditGenresAsync(movie, genres);
                     bolret = true;
                 }
 
@@ -235,15 +243,35 @@ namespace Test_Movie.Controllers
 
         private async Task<Movie> EditGeneresAsync(Movie movie, List<Guid> genres)
         {
+            //Выбираем фильм до изменения, вытакскиваем все жанры которые были изначально
+            Movie movieBeforeChange = await _movieRepository.GetItemAsync(movie.Id);
+            List<Genre> genreBeforeChange = movieBeforeChange.Genres;
+
+            //Выбираем сначала все жанры, что бы выбрать по пришедшим id жанры которые выбранны сейчас
             List<Genre> allGenres = await _genreRepository.GetItemsAsync();
-            List<Genre> genresList = new List<Genre>();
-
-
+            List<Genre> genreAfterChange = new List<Genre>();
             foreach (var genre in genres)
             {
-                genresList.AddRange(allGenres.Where(x => x.Id == genre).ToList());
+                genreAfterChange.AddRange(allGenres.Where(x => x.Id == genre).ToList());
             }
-            movie.Genres.AddRange(genresList);
+
+            //Выбираю те жанры которые были до изменения, и их не стало после изменения, что бы
+            //Удалить их из таблицы на для коллекции фильмов
+            List<Genre> genresToDelete = genreBeforeChange.Except(genreAfterChange).ToList();
+
+            //Выбираю жанры которые были до измения, и которые остались после, что бы ни какие
+            //действия с ними не делать
+            List<Genre> genresUnchanged = genreBeforeChange.Intersect(genreAfterChange).ToList();
+
+            //Выбираю жанры которые нужно будет добавить в коллекию к фильму
+            List<Genre> genresToAdd = genreAfterChange.Except(genresUnchanged).ToList();
+
+            foreach (var item in genresToDelete)
+            {
+                movie.Genres.Remove(item);
+            }
+            
+            movie.Genres.AddRange(genresToAdd);
 
             return movie;
         }
