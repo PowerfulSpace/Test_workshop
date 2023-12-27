@@ -29,4 +29,4 @@ Console.ReadLine();
 
 //https://www.youtube.com/watch?v=exXavNOqaVo&ab_channel=IAmTimCorey
 
-//6 36
+//23 10
