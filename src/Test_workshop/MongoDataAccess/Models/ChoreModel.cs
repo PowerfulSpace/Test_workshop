@@ -9,7 +9,6 @@ namespace MongoDataAccess.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
 
-
         public string ChoreText { get; set; }
         public int FrequencyInDays { get; set; }
         public UserModel? AssignedTo { get; set; }
