@@ -41,5 +41,18 @@ namespace MongoDataAccess.DataAccesss
 
             return results.ToList();
         }
+
+        public Task CreateUser(UserModel user)
+        {
+            var usersCollection = ConnectToMongo<UserModel>(UserCollection);
+            return usersCollection.InsertOneAsync(user);
+        }
+
+        public Task CreateChore(ChoreModel chore)
+        {
+            var choresCollection = ConnectToMongo<ChoreModel>(ChoreCollection);
+            return choresCollection.InsertOneAsync(chore);
+        }
+
     }
 }
