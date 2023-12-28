@@ -61,5 +61,10 @@ namespace MongoDataAccess.DataAccesss
             return choresCollection.ReplaceOneAsync(filter, chore, new ReplaceOptions { IsUpsert = true });
         }
 
+        public Task DeleteChore(ChoreModel chore)
+        {
+            var choresCollection = ConnectToMongo<ChoreModel>(ChoreCollection);
+            return choresCollection.DeleteOneAsync(x => x.Id == chore.Id);
+        }
     }
 }
