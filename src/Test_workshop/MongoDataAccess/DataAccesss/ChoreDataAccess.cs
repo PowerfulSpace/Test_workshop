@@ -54,5 +54,12 @@ namespace MongoDataAccess.DataAccesss
             return choresCollection.InsertOneAsync(chore);
         }
 
+        public Task UpdateChore(ChoreModel chore)
+        {
+            var choresCollection = ConnectToMongo<ChoreModel>(ChoreCollection);
+            var filter = Builders<ChoreModel>.Filter.Eq("Id", chore.Id);
+            return choresCollection.ReplaceOneAsync(filter, chore, new ReplaceOptions { IsUpsert = true });
+        }
+
     }
 }
