@@ -75,6 +75,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectMongoDB", "ConnectMo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDataAccess", "MongoDataAccess\MongoDataAccess.csproj", "{3201D0B1-2D27-402E-8848-D8CC370AD54A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestRabbitMq", "TestRabbitMq\TestRabbitMq.csproj", "{13F86F74-0BEA-4D93-B3A7-CDCA1BDF211D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -221,6 +223,10 @@ Global
 		{3201D0B1-2D27-402E-8848-D8CC370AD54A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3201D0B1-2D27-402E-8848-D8CC370AD54A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3201D0B1-2D27-402E-8848-D8CC370AD54A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13F86F74-0BEA-4D93-B3A7-CDCA1BDF211D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13F86F74-0BEA-4D93-B3A7-CDCA1BDF211D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13F86F74-0BEA-4D93-B3A7-CDCA1BDF211D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13F86F74-0BEA-4D93-B3A7-CDCA1BDF211D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
