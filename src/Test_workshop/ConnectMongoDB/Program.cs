@@ -22,9 +22,6 @@ using MongoDataAccess.Models;
 
 
 
-
-
-
 ChoreDataAccess db = new ChoreDataAccess();
 
 await db.CreateUser(new UserModel() { FirstName = "Tim", LastName = "Corey" });
