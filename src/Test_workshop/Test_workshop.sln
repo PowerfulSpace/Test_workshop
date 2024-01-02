@@ -75,8 +75,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectMongoDB", "ConnectMo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDataAccess", "MongoDataAccess\MongoDataAccess.csproj", "{3201D0B1-2D27-402E-8848-D8CC370AD54A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingSqrsProject", "TestingSqrsProject\TestingSqrsProject.csproj", "{B2EDB6A7-AE1F-46B3-8D0F-D3DA3E7B5B94}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -223,10 +221,6 @@ Global
 		{3201D0B1-2D27-402E-8848-D8CC370AD54A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3201D0B1-2D27-402E-8848-D8CC370AD54A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3201D0B1-2D27-402E-8848-D8CC370AD54A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B2EDB6A7-AE1F-46B3-8D0F-D3DA3E7B5B94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B2EDB6A7-AE1F-46B3-8D0F-D3DA3E7B5B94}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B2EDB6A7-AE1F-46B3-8D0F-D3DA3E7B5B94}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B2EDB6A7-AE1F-46B3-8D0F-D3DA3E7B5B94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
