@@ -1,20 +1,25 @@
 ﻿
 
-// спользуется замена, на первую первую группу, у нас она и единсвенная (\s?\d+[.,]?\d*)
-// $1 - Включает последнюю подстроку, совпадающую с захватываемой группой
+// Define array of decimal values.
+using System.Globalization;
 using System.Text.RegularExpressions;
 
-string pattern = @"\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*";
-string replacement = "$1";
-string input = "$16.32 12.19 £16.29 €18.29  €18,29";
-string result = Regex.Replace(input, pattern, replacement);
-Console.WriteLine(result);
+string[] values = { "16.35", "19.72", "1234", "0.99" };
+// Determine whether currency precedes (True) or follows (False) number.
+bool precedes = NumberFormatInfo.CurrentInfo.CurrencyPositivePattern % 2 == 0;
+// Get decimal separator.
+string cSeparator = NumberFormatInfo.CurrentInfo.CurrencyDecimalSeparator;
+// Get currency symbol.
+string symbol = NumberFormatInfo.CurrentInfo.CurrencySymbol;
+// If symbol is a "$", add an extra "$".
+if (symbol == "$") symbol = "$$";
 
-// используется замена на группу с именем amount (?<amount>\s?\d+[.,]?\d*)
-string pattern2 = @"\p{Sc}*(?<amount>\s?\d+[.,]?\d*)\p{Sc}*";
-string replacement2 = "${amount}";
-string input2 = "$16.32 12.19 £16.29 €18.29  €18,29";
-string result2 = Regex.Replace(input2, pattern2, replacement2);
-Console.WriteLine(result2);
+// Define regular expression pattern and replacement string.
+string pattern = @"\b(\d+)(" + cSeparator + @"(\d+))?";
+string replacement = "$1$2";
+replacement = precedes ? symbol + " " + replacement : replacement + " " + symbol;
+foreach (string value in values)
+    Console.WriteLine("{0} --> {1}", value, Regex.Replace(value, pattern, replacement));
+
 
 Console.ReadLine();
