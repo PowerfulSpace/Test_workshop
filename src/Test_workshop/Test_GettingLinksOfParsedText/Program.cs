@@ -66,3 +66,36 @@ static void Regular_ExpressionMatching(string input, string pattern)
         Console.WriteLine("   {0} at position {1}", match.Value, match.Index);
 
 }
+
+
+static void Regular_Multiline(string input, string pattern)
+{
+    SortedList<int, string> scores = new SortedList<int, string>(new DescendingComparer<int>());
+
+
+
+    foreach (Match match in Regex.Matches(input, pattern, RegexOptions.Multiline))
+        scores.Add(Convert.ToInt32(match.Groups[2].Value), match.Groups[1].Value);
+
+    // List scores in descending order.
+    foreach (KeyValuePair<int, string> score in scores)
+        Console.WriteLine("{0}: {1}", score.Value, score.Key);
+
+
+    //Преобразует текст в одну строку
+    string pattern2 = "(?s)^.+";
+    string input2 = "This is one line and" + Environment.NewLine + "this is the second.";
+
+    foreach (Match match in Regex.Matches(input2, pattern2))
+        Console.WriteLine(Regex.Escape(match.Value));
+
+}
+
+
+public class DescendingComparer<T> : IComparer<T>
+{
+    public int Compare(T x, T y)
+    {
+        return Comparer<T>.Default.Compare(x, y) * -1;
+    }
+}
