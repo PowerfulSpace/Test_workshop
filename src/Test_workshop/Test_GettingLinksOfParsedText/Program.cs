@@ -47,23 +47,6 @@ static void ExecudedGroup(string input,string pattern)
         Console.WriteLine(match.Value);
 }
 
-static void Regular_ExpressionMatching(string input, string pattern)
-{
-    pattern = @"\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b";
-    input = "01-9999999 020-333333 777-88-9999";
-    Console.WriteLine("Matches for {0}:", pattern);
-    foreach (Match match in Regex.Matches(input, pattern))
-        Console.WriteLine("   {0} at position {1}", match.Value, match.Index);
-
-
-    //Работает точно так же как и предыдущий пример,только внедрён группа захвата
-    pattern = @"\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b";
-    input = "01-9999999 020-333333 777-88-9999";
-    Console.WriteLine("Matches for {0}:", pattern);
-    foreach (Match match in Regex.Matches(input, pattern))
-        Console.WriteLine("   {0} at position {1}", match.Value, match.Index);
-
-}
 
 static void Regular_Multiline(string input, string pattern)
 {
