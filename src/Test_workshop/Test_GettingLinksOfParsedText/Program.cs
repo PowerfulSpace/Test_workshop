@@ -39,3 +39,11 @@ Console.WriteLine();
 
 
 Console.ReadLine();
+
+
+static void ExecudedGroup(string input,string pattern)
+{
+    Match match = Regex.Match(input, pattern);
+    if (match.Success)
+        Console.WriteLine(match.Value);
+}
