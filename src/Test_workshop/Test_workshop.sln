@@ -75,7 +75,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectMongoDB", "ConnectMo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoDataAccess", "MongoDataAccess\MongoDataAccess.csproj", "{3201D0B1-2D27-402E-8848-D8CC370AD54A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_GettingLinksOfParsedText", "Test_GettingLinksOfParsedText\Test_GettingLinksOfParsedText.csproj", "{500BFBF4-228F-4C67-958C-C8BED8B11BD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_GettingLinksOfParsedText", "Test_GettingLinksOfParsedText\Test_GettingLinksOfParsedText.csproj", "{500BFBF4-228F-4C67-958C-C8BED8B11BD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test+parallel", "Test+parallel\Test+parallel.csproj", "{66E385B9-E85B-47B2-BEBA-76F8593AF330}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -227,6 +229,10 @@ Global
 		{500BFBF4-228F-4C67-958C-C8BED8B11BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{500BFBF4-228F-4C67-958C-C8BED8B11BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{500BFBF4-228F-4C67-958C-C8BED8B11BD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66E385B9-E85B-47B2-BEBA-76F8593AF330}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66E385B9-E85B-47B2-BEBA-76F8593AF330}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66E385B9-E85B-47B2-BEBA-76F8593AF330}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66E385B9-E85B-47B2-BEBA-76F8593AF330}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
