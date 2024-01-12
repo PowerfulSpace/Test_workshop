@@ -40,14 +40,12 @@ Console.WriteLine();
 
 Console.ReadLine();
 
-
 static void ExecudedGroup(string input,string pattern)
 {
     Match match = Regex.Match(input, pattern);
     if (match.Success)
         Console.WriteLine(match.Value);
 }
-
 
 static void Regular_ExpressionMatching(string input, string pattern)
 {
@@ -66,7 +64,6 @@ static void Regular_ExpressionMatching(string input, string pattern)
         Console.WriteLine("   {0} at position {1}", match.Value, match.Index);
 
 }
-
 
 static void Regular_Multiline(string input, string pattern)
 {
