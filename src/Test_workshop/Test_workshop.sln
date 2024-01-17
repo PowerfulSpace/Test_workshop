@@ -53,8 +53,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_LINQ_To_Entities", "Te
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DisignProject", "DisignProject\DisignProject.csproj", "{6AD56854-5F2E-4F83-846D-369FDEDAC416}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestDropProject", "TestDropProject\TestDropProject.csproj", "{56F87F0A-0DAE-4309-B654-69E2B7B203D0}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Simple_Multiselect", "Test_Simple_Multiselect\Test_Simple_Multiselect.csproj", "{AACB2A17-D478-4302-A92E-BA8B5C43A8E0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Simple_Multiselect_Extended", "Test_Simple_Multiselect_Extended\Test_Simple_Multiselect_Extended.csproj", "{D2663D08-7D10-461E-B240-D5428B2EC5B9}"
@@ -181,10 +179,6 @@ Global
 		{6AD56854-5F2E-4F83-846D-369FDEDAC416}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AD56854-5F2E-4F83-846D-369FDEDAC416}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AD56854-5F2E-4F83-846D-369FDEDAC416}.Release|Any CPU.Build.0 = Release|Any CPU
-		{56F87F0A-0DAE-4309-B654-69E2B7B203D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{56F87F0A-0DAE-4309-B654-69E2B7B203D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{56F87F0A-0DAE-4309-B654-69E2B7B203D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{56F87F0A-0DAE-4309-B654-69E2B7B203D0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AACB2A17-D478-4302-A92E-BA8B5C43A8E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AACB2A17-D478-4302-A92E-BA8B5C43A8E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AACB2A17-D478-4302-A92E-BA8B5C43A8E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
