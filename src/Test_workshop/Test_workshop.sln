@@ -57,8 +57,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Simple_Multiselect_Ext
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Difficult_Multiselect_Extended", "Test_Difficult_Multiselect_Extended\Test_Difficult_Multiselect_Extended.csproj", "{3F2B3E7D-F82B-4764-8EE8-9258A04AF1DD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Movie_Progect", "Test_Movie_Progect\Test_Movie_Progect.csproj", "{F8C2A862-FE82-44BC-888A-B4265D127139}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Movie_Many_To_Many", "Test_Movie_Many_To_Many\Test_Movie_Many_To_Many.csproj", "{F156FB8C-21C0-4231-9E89-8FA62CB6B28A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Many_To_Many_3", "Test_Many_To_Many_3\Test_Many_To_Many_3.csproj", "{8BC946D6-55A3-486E-9959-EE9CF95423DC}"
@@ -175,10 +173,6 @@ Global
 		{3F2B3E7D-F82B-4764-8EE8-9258A04AF1DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F2B3E7D-F82B-4764-8EE8-9258A04AF1DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F2B3E7D-F82B-4764-8EE8-9258A04AF1DD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F8C2A862-FE82-44BC-888A-B4265D127139}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F8C2A862-FE82-44BC-888A-B4265D127139}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F8C2A862-FE82-44BC-888A-B4265D127139}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F8C2A862-FE82-44BC-888A-B4265D127139}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F156FB8C-21C0-4231-9E89-8FA62CB6B28A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F156FB8C-21C0-4231-9E89-8FA62CB6B28A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F156FB8C-21C0-4231-9E89-8FA62CB6B28A}.Release|Any CPU.ActiveCfg = Release|Any CPU
