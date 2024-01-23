@@ -24,3 +24,4 @@ static string MDYToDMY(string input)
     }
 
     Console.ReadLine();
+}
