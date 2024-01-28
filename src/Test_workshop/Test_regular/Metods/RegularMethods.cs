@@ -21,13 +21,6 @@ namespace Test_regular.Metods
                 }
             }
         } 
-        public static void SubtractFromTheGroup()
-        {
-
-
-
-        }
-
 
         public static void Multiline()
         {
