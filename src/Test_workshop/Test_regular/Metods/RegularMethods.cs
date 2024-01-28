@@ -23,13 +23,7 @@ namespace Test_regular.Metods
         } 
 
 
-        public class DescendingComparer<T> : IComparer<T>
-        {
-            public int Compare(T x, T y)
-            {
-                return Comparer<T>.Default.Compare(x, y) * -1;
-            }
-        }
+       
 
     }
 }
