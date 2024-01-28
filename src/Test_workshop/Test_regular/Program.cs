@@ -1,9 +1,16 @@
 ﻿
 using System.Text.RegularExpressions;
 
-string phoneNumber = "+1(876)-234-12-98";
+//Используется функция изменения совпадений
 
-Regex regex = new Regex(@"\D");
-string result = regex.Replace(phoneNumber, "");
+string input = "5 is less than 10";
 
+
+var result = Regex.Replace(input,
+    @"\d+",
+    x => (int.Parse(x.Value) + 1).ToString());
+
+
+Console.WriteLine(input);
+Console.WriteLine();
 Console.WriteLine(result);
