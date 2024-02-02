@@ -36,15 +36,7 @@ foreach (Match match in Regex.Matches(input2, pattern2))
     Console.WriteLine("'{0}' found at position {1}.", match.Value, match.Index);
 Console.WriteLine();
 
-//Поиск предложений которые включат в себя не более 10 слов
-string pattern3 = @"\b[A-Z](\w*?\s*?){1,10}[.!?]";
-string input3 = "Hi. I am writing a short note. Its purpose is " +
-                      "to test a regular expression that attempts to find " +
-                      "sentences with ten or fewer words. Most sentences " +
-                      "in this note are short.";
-foreach (Match match in Regex.Matches(input3, pattern3))
-    Console.WriteLine("'{0}' found at position {1}.", match.Value, match.Index);
-Console.WriteLine();
+
 
 
 
