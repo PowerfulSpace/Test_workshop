@@ -11,15 +11,4 @@ foreach (var item in result)
     Console.WriteLine(item);
 }
 
-Console.WriteLine();
-
-
-
-
-
-
-
-
-
-
 Console.ReadLine();
