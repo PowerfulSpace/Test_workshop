@@ -46,11 +46,7 @@ foreach (Match match in Regex.Matches(input3, pattern3))
     Console.WriteLine("'{0}' found at position {1}.", match.Value, match.Index);
 Console.WriteLine();
 
-//Выбор строк с ленивым совпадением
-string greedyPattern = @"\b.*([0-9]{4})\b";
-string input4 = "1112223333 3992991999";
-foreach (Match match in Regex.Matches(input4, greedyPattern))
-    Console.WriteLine("Account ending in ******{0}.", match.Groups[1].Value);
+
 
 
 Console.ReadLine();
