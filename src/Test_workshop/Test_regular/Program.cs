@@ -1,14 +1,10 @@
-﻿//Без ленивого совпадения не корректно отрабатывает код
-using System.Text.RegularExpressions;
+﻿
+using Test_regular.Metods;
 
-string regexp = @""".+?"" ";
-string str = "a \"witch\" and her \"broom\" is one";
-Regex regex = new Regex(regexp);
-var result = regex.Matches(str);
-
-foreach (var item in result)
-{
-    Console.WriteLine(item);
-}
+await AddTakeDemo.BC_AddTakeCompleteAdding();
+TryTakeDemo.BC_TryTake();
+FromToAnyDemo.BC_FromToAny();
+await ConsumingEnumerableDemo.BC_GetConsumingEnumerable();
+Console.WriteLine("Press any key to exit.");
 
 Console.ReadLine();
