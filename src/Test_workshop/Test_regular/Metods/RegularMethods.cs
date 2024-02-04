@@ -1,9 +1,8 @@
 ﻿using System.Collections.Concurrent;
-using System.Text.RegularExpressions;
 
 namespace Test_regular.Metods
 {
-   
+
     class AddTakeDemo
     {
         // Demonstrates:
