@@ -2,7 +2,6 @@
 
 namespace Test_regular.Metods
 {
-
     class AddTakeDemo
     {
         // Demonstrates:
@@ -41,7 +40,6 @@ namespace Test_regular.Metods
             }
         }
     }
-
     class TryTakeDemo
     {
         // Demonstrates:
@@ -77,7 +75,6 @@ namespace Test_regular.Metods
             }
         }
     }
-
     class FromToAnyDemo
     {
         // Demonstrates:
@@ -105,7 +102,6 @@ namespace Test_regular.Metods
             Console.WriteLine("TryTakeFromAny: retrieved {0} items (should be 10)", numItems);
         }
     }
-
     class ConsumingEnumerableDemo
     {
         // Demonstrates:
@@ -143,5 +139,4 @@ namespace Test_regular.Metods
             }
         }
     }
-
 }
