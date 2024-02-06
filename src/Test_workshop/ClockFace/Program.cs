@@ -7,7 +7,7 @@ Console.WriteLine(result);
 Console.ReadLine();
 
 
-
+//Дорешать, решить вопросс с тем что бы часовая стралка тоже смещаласьот часа к часу
 
 static int Test(int hour, int minutes)
 {
