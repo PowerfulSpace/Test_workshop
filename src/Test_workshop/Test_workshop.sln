@@ -61,9 +61,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Movie_Many_To_Many", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Many_To_Many_3", "Test_Many_To_Many_3\Test_Many_To_Many_3.csproj", "{8BC946D6-55A3-486E-9959-EE9CF95423DC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_regular", "Test_regular\Test_regular.csproj", "{61C29ACF-5FB2-4185-A034-861736844A11}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClockFace", "ClockFace\ClockFace.csproj", "{946BD7F0-01DB-4C7F-B42B-285D32C0502E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClockFace", "ClockFace\ClockFace.csproj", "{946BD7F0-01DB-4C7F-B42B-285D32C0502E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -183,10 +181,6 @@ Global
 		{8BC946D6-55A3-486E-9959-EE9CF95423DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BC946D6-55A3-486E-9959-EE9CF95423DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BC946D6-55A3-486E-9959-EE9CF95423DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{61C29ACF-5FB2-4185-A034-861736844A11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{61C29ACF-5FB2-4185-A034-861736844A11}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{61C29ACF-5FB2-4185-A034-861736844A11}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{61C29ACF-5FB2-4185-A034-861736844A11}.Release|Any CPU.Build.0 = Release|Any CPU
 		{946BD7F0-01DB-4C7F-B42B-285D32C0502E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{946BD7F0-01DB-4C7F-B42B-285D32C0502E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{946BD7F0-01DB-4C7F-B42B-285D32C0502E}.Release|Any CPU.ActiveCfg = Release|Any CPU
