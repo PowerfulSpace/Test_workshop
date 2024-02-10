@@ -1,6 +1,7 @@
 ﻿
 
-
+Person person = new Person();
+Car car = new Car();
 
 
 
@@ -32,4 +33,18 @@ interface Test2
 
     public abstract void Method();
 
+}
+
+
+interface IMovable
+{
+    void Move();
+}
+class Person : IMovable
+{
+    public void Move() => Console.WriteLine("Человек идет");
+}
+struct Car : IMovable
+{
+    public void Move() => Console.WriteLine("Машина едет");
 }
