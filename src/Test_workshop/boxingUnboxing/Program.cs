@@ -1,2 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+
+
+object box = (int)42;
+long unbox = (long)box;
+
+
+
+
+Console.ReadLine();
