@@ -3,7 +3,9 @@
 Person person = new Person();
 Car car = new Car();
 
-
+System.DateTime a;
+System.Numerics.BigInteger b;
+System.Numerics.Complex c;
 
 Console.ReadLine();
 
