@@ -3,12 +3,14 @@
 
 
 
-
-object box = EnumType.None;
-long unbox = (long)(int)box;
-
+Nullable<int> value;
+int? value2;
 
 Console.ReadLine();
 
 
-public enum EnumType { None }
+public struct Nullable<T> where T : struct
+{
+    public bool HasValue { get; }
+    public T Value { get; }
+}
