@@ -1,6 +1,11 @@
 ﻿
 
-
+string a = "hello world";
+string b = a;
+a = "hello";
+Console.WriteLine("{0}, {1}", a, b);
+Console.WriteLine(a == b);
+Console.WriteLine(object.ReferenceEquals(a, b));
 
 
 
@@ -16,8 +21,17 @@ Console.ReadLine();
 
 
 
+#region Задачки для понимания строк
 
 
+//string a = "hello world";
+//string b = a;
+//a = "hello";
+//Console.WriteLine("{0}, {1}", a, b);
+//Console.WriteLine(a == b);
+//Console.WriteLine(object.ReferenceEquals(a, b));
+
+#endregion
 
 
 
