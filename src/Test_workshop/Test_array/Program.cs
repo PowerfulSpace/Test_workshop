@@ -1,12 +1,5 @@
 ﻿
 
-string a = "hello world";
-string b = a;
-a = "hello";
-Console.WriteLine("{0}, {1}", a, b);
-Console.WriteLine(a == b);
-Console.WriteLine(object.ReferenceEquals(a, b));
-
 
 
 
@@ -16,12 +9,34 @@ Console.ReadLine();
 
 
 
+#region Задачки для понимания строк 2
+
+//string hello = "hello";
+//string helloWorld = "hello world";
+//string helloWorld2 = hello + " world";
+
+//Console.WriteLine("{0}, {1}: {2}, {3}", helloWorld, helloWorld2,
+//    helloWorld == helloWorld2,
+//    object.ReferenceEquals(helloWorld, helloWorld2));
+
+
+
+
+//string hello = "hello";
+//string helloWorld = "hello world";
+//string helloWorld2 = "hello world";
+//Console.WriteLine("{0}, {1}: {2}, {3}", helloWorld, helloWorld2,
+//    helloWorld == helloWorld2,
+//    object.ReferenceEquals(helloWorld, helloWorld2));
+
+
+#endregion
 
 
 
 
 
-#region Задачки для понимания строк
+#region Задачки для понимания строк 1
 
 
 //string a = "hello world";
