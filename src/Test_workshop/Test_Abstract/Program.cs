@@ -1,7 +1,5 @@
 ﻿
 
-Person person = new Person();
-Car car = new Car();
 
 System.DateTime a;
 System.Numerics.BigInteger b;
@@ -37,18 +35,5 @@ interface Test2
 
 }
 
-
-interface IMovable
-{
-    void Move();
-}
-class Person : IMovable
-{
-    public void Move() => Console.WriteLine("Человек идет");
-}
-struct Car : IMovable
-{
-    public void Move() => Console.WriteLine("Машина едет");
-}
 
 
