@@ -65,7 +65,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClockFace", "ClockFace\Cloc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Abstract", "Test_Abstract\Test_Abstract.csproj", "{1618D6AD-BAC5-44FC-BC3B-25D425809385}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "boxingUnboxing", "boxingUnboxing\boxingUnboxing.csproj", "{6AA08461-CDD2-4DB5-88F8-A0C863E456F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "boxingUnboxing", "boxingUnboxing\boxingUnboxing.csproj", "{6AA08461-CDD2-4DB5-88F8-A0C863E456F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_array", "Test_array\Test_array.csproj", "{95E42ECB-D374-4B16-8AB9-5B18527BAF49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -197,6 +199,10 @@ Global
 		{6AA08461-CDD2-4DB5-88F8-A0C863E456F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AA08461-CDD2-4DB5-88F8-A0C863E456F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AA08461-CDD2-4DB5-88F8-A0C863E456F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95E42ECB-D374-4B16-8AB9-5B18527BAF49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95E42ECB-D374-4B16-8AB9-5B18527BAF49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95E42ECB-D374-4B16-8AB9-5B18527BAF49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95E42ECB-D374-4B16-8AB9-5B18527BAF49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
