@@ -1,12 +1,40 @@
 ﻿
+string a = new string(new char[] { 'a', 'b', 'c' });
+object o = String.Copy(a);
+Console.WriteLine(object.ReferenceEquals(o, a));
+String.Intern(o.ToString());
+Console.WriteLine(object.ReferenceEquals(o, String.Intern(a)));
 
+object o2 = String.Copy(a);
+String.Intern(o2.ToString());
+Console.WriteLine(object.ReferenceEquals(o2, String.Intern(a)));
 
 
 
 Console.ReadLine();
 
 
+#region Задачки для понимания строк 3, сложный пример
 
+//string a = new string(new char[] { 'a', 'b', 'c' });
+//object o = String.Copy(a);
+//Console.WriteLine(object.ReferenceEquals(o, a));
+//String.Intern(o.ToString());
+//Console.WriteLine(object.ReferenceEquals(o, String.Intern(a)));
+
+
+
+//string a = new string(new char[] { 'a', 'b', 'c' });
+//object o = String.Copy(a);
+//Console.WriteLine(object.ReferenceEquals(o, a));
+//String.Intern(o.ToString());
+//Console.WriteLine(object.ReferenceEquals(o, String.Intern(a)));
+
+//object o2 = String.Copy(a);
+//String.Intern(o2.ToString());
+//Console.WriteLine(object.ReferenceEquals(o2, String.Intern(a)));
+
+#endregion
 
 
 #region Задачки для понимания строк 2
