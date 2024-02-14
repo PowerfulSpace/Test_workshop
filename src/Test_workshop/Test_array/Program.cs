@@ -1,20 +1,46 @@
 ﻿
-int[] array = new int[3] { 10, 15, 20 };
 
 
-Method(array);
 
-Console.WriteLine(array[0]);
+
+
 
 Console.ReadLine();
 
 
 
-static void Method(int[] array)
-{
-    array = new int[3];
-    array[0] = 25;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#region Задачки для понимания с массивом значимых элементом
+
+
+//int[] array = new int[3] { 10, 15, 20 };
+
+
+//Method(array);
+
+//Console.WriteLine(array[0]);
+
+//Console.ReadLine();
+
+
+
+//static void Method(int[] array)
+//{
+//    array = new int[3];
+//    array[0] = 25;
+//}
 
 
 
@@ -35,3 +61,4 @@ static void Method(int[] array)
 //{
 //    array[0] = 25;
 //}
+#endregion
