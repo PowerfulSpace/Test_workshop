@@ -1,15 +1,8 @@
 ﻿
-string a = new string(new char[] { 'a', 'b', 'c' });
-object o = String.Copy(a);
-Console.WriteLine(object.ReferenceEquals(o, a));
-String.Intern(o.ToString());
-Console.WriteLine(object.ReferenceEquals(o, String.Intern(a)));
 
-object o2 = String.Copy(a);
-String.Intern(o2.ToString());
-Console.WriteLine(object.ReferenceEquals(o2, String.Intern(a)));
-
-
+string str = "Hello";
+str = str.ToUpper().Replace("E", "q").Trim();
+Console.WriteLine(str);
 
 Console.ReadLine();
 
