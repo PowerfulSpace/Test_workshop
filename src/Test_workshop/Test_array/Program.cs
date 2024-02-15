@@ -1,17 +1,9 @@
 ﻿
 
-void Sum(int[] numbers, int initialValue)
-{
-    int result = initialValue;
-    foreach (var n in numbers)
-    {
-        result += n;
-    }
-    Console.WriteLine(result);
-}
+Console.WriteLine("{0:#### (###-##-##)}",80293190884);
 
-int[] nums = { 1, 2, 3, 4, 5 };
-Sum(nums, 10);
+int[] nums1 = { 1, 2, 3, 4 };
+int[] nums2 = new int[] { };   // пустой массив
 
 Console.ReadLine();
 
