@@ -1,8 +1,6 @@
 ﻿
 
-string str = "Hello";
-str = str.ToUpper().Replace("E", "q").Trim();
-Console.WriteLine(str);
+Console.WriteLine("{0:#### (###-##-##)}",80293190884);
 
 Console.ReadLine();
 
