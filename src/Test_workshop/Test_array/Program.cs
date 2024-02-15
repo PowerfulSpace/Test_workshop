@@ -1,8 +1,8 @@
 ﻿
 
-void Sum(params int[] numbers)
+void Sum(int[] numbers, int initialValue)
 {
-    int result = 0;
+    int result = initialValue;
     foreach (var n in numbers)
     {
         result += n;
@@ -11,10 +11,7 @@ void Sum(params int[] numbers)
 }
 
 int[] nums = { 1, 2, 3, 4, 5 };
-Sum(nums);
-Sum(1, 2, 3, 4);
-Sum(1, 2, 3);
-Sum();
+Sum(nums, 10);
 
 Console.ReadLine();
 
