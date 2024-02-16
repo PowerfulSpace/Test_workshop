@@ -10,14 +10,7 @@ Console.ReadLine();
 
 
 
-abstract class Test1 : Test2
-{
-    public static int MyProperty { get; set; }
-    public Test1()
-    {
-        
-    }
-}
+
 
 interface Test2
 {
