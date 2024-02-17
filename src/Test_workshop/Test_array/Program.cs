@@ -1,9 +1,21 @@
-﻿
+﻿using People = System.Collections.Generic.List<Person>;
+
+People people = new() { new("Tom", 38), new("Bob", 42) };
+people.ForEach(Console.WriteLine);
+
+
+
 
 Console.WriteLine("{0:#### (###-##-##)}",80293190884);
 
 int[] nums1 = { 1, 2, 3, 4 };
 int[] nums2 = new int[] { };   // пустой массив
+
+
+
+ 
+
+
 
 Console.ReadLine();
 
@@ -70,7 +82,7 @@ Console.ReadLine();
 
 #endregion
 
-
+public record Person(string Name, int Age);
 
 
 #region Задачки для понимания с массивом значимых элементом
