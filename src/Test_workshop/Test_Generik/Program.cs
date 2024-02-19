@@ -1,5 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+
+Person<int> tom = new Person<int>(546, "Tom");
+Company<Person<int>> microsoft = new Company<Person<int>>(tom);
 
 
 // класс компании
