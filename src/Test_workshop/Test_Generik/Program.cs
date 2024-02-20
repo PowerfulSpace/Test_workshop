@@ -10,7 +10,4 @@ Console.WriteLine(microsoft.CEO.Name);  // Tom
 Console.ReadLine();
 
 // класс компании
-class Company<P>
-{
-    public P CEO { get; set; }  // президент компании
-}
+
