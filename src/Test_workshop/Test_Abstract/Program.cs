@@ -52,10 +52,5 @@ class Ship : Transport
     }
 }
 
-class Aircraft : Transport
-{
-   
-
-}
 
 
