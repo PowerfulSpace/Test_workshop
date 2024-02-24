@@ -36,13 +36,6 @@ interface Test2
 
 
 
-abstract class Transport
-{
-    // абстрактное свойство для хранения скорости
-    public abstract int Speed { get; set; }
-}
-// класс корабля
-
 
 
 
