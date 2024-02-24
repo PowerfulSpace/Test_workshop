@@ -42,10 +42,7 @@ abstract class Transport
     public abstract int Speed { get; set; }
 }
 // класс корабля
-class Ship : Transport
-{
 
-}
 
 
 
