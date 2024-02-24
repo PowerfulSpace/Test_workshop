@@ -44,12 +44,7 @@ abstract class Transport
 // класс корабля
 class Ship : Transport
 {
-    int speed;
-    public override int Speed
-    {
-        get => speed;
-        set => speed = value;
-    }
+
 }
 
 
