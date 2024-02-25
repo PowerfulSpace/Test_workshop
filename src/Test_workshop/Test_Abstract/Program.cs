@@ -9,13 +9,6 @@ Console.ReadLine();
 
 
 
-struct Test
-{
-    public static void Method()
-    {
-
-    }
-}
 
 
 interface Test2
