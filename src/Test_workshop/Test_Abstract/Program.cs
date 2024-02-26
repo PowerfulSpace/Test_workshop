@@ -1,10 +1,6 @@
 ﻿
 
 
-System.DateTime a;
-System.Numerics.BigInteger b;
-System.Numerics.Complex c;
-
 Console.ReadLine();
 
 
