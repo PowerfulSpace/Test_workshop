@@ -1,28 +1,17 @@
 ﻿
 
-var s = new S();
-using (s)
+List<Action> actions = new List<Action>();
+for (var count = 0; count < 10; count++)
 {
-    Console.WriteLine(s.GetDispose());
+    actions.Add(() => Console.WriteLine(count));
 }
-Console.WriteLine(s.GetDispose());
-
-
+foreach (var action in actions)
+{
+    action();
+}
 
 
 Console.ReadLine();
 
 
 
-public struct S : IDisposable
-{
-    private bool dispose;
-    public void Dispose()
-    {
-        dispose = true;
-    }
-    public bool GetDispose()
-    {
-        return dispose;
-    }
-}
