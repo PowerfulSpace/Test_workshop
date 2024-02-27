@@ -1,14 +1,11 @@
 ﻿
 
-//B obj1 = new A();
-//obj1.Foo();
-
-B obj2 = new B();
-obj2.Foo();
-
-A obj3 = new B();
-obj3.Foo();
-
+var s = new S();
+using (s)
+{
+    Console.WriteLine(s.GetDispose());
+}
+Console.WriteLine(s.GetDispose());
 
 
 
@@ -17,17 +14,15 @@ Console.ReadLine();
 
 
 
-class A
+public struct S : IDisposable
 {
-    virtual void Foo()
+    private bool dispose;
+    public void Dispose()
     {
-        Console.Write("Class A");
+        dispose = true;
     }
-}
-class B : A
-{
-    override void Foo()
+    public bool GetDispose()
     {
-        Console.Write("Class B");
+        return dispose;
     }
 }
