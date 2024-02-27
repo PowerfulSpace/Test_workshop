@@ -1,16 +1,26 @@
 ﻿
 
-var s1 = string.Format("{0}{1}", "abc", "cba");
-var s2 = "abc" + "cba";
-var s3 = "abccba";
 
-Console.WriteLine(s1 == s2);
-Console.WriteLine((object)s1 == (object)s2);
-Console.WriteLine(s2 == s3);
-Console.WriteLine((object)s2 == (object)s3);
+
+
+lock (syncObject)
+{
+    Write();
+}
 
 
 Console.ReadLine();
 
 
 
+internal partial class Program
+{
+    private static Object syncObject = new Object();
+    private static void Write()
+    {
+        lock (syncObject)
+        {
+            Console.WriteLine("test");
+        }
+    }
+}
