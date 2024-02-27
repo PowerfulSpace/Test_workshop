@@ -1,26 +1,40 @@
 ﻿
 
 
+var c = new C();
+A a = c;
 
-
-lock (syncObject)
-{
-    Write();
-}
+a.Print2();
+a.Print1();
+c.Print2();
 
 
 Console.ReadLine();
 
 
 
-internal partial class Program
+public class A
 {
-    private static Object syncObject = new Object();
-    private static void Write()
+    public virtual void Print1()
     {
-        lock (syncObject)
-        {
-            Console.WriteLine("test");
-        }
+        Console.Write("A");
+    }
+    public void Print2()
+    {
+        Console.Write("A");
+    }
+}
+public class B : A
+{
+    public override void Print1()
+    {
+        Console.Write("B");
+    }
+}
+public class C : B
+{
+    new public void Print2()
+    {
+        Console.Write("C");
     }
 }
