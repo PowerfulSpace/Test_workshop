@@ -1,17 +1,12 @@
 ﻿
 
 
-int c = 3;
-Console.Write(Sum(5, 3, out c) + " ");
-Console.Write(c);
+var a = null;
+a = 10;
+Console.WriteLine(a);
+Console.ReadLine();
+
 Console.ReadLine();
 
 
-Console.ReadLine();
 
-
-
-static int Sum(int a, int b, out int c)
-{
-    return a + b;
-}
