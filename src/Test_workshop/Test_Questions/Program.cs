@@ -1,40 +1,50 @@
 ﻿
+using System.Diagnostics;
 
+var w = new Wrap();
+var wraps = new Wrap[3];
+for (int i = 0; i < wraps.Length; i++)
+{
+    wraps[i] = w;
+}
 
-var c = new C();
-A a = c;
+var values = wraps.Select(x => x.Value);
 
-a.Print2();
-a.Print1();
-c.Print2();
+var results = Square(values);
+int sum = 0;
+int count = 0;
+foreach (var r in results)
+{
+    count++;
+    sum += r;
+}
+Console.WriteLine("Count {0}", count);
+Console.WriteLine("Sum {0}", sum);
+
+Console.WriteLine("Count {0}", results.Count());
+Console.WriteLine("Sum {0}", results.Sum());
 
 
 Console.ReadLine();
 
 
+static IEnumerable<int> Square(IEnumerable<int> a)
+{
+    foreach (var r in a)
+    {
+        Console.WriteLine(r * r);
+        yield return r * r;
+    }
+}
 
-public class A
+class Wrap
 {
-    public virtual void Print1()
+    private static int init = 0;
+
+    public int Value
     {
-        Console.Write("A");
-    }
-    public void Print2()
-    {
-        Console.Write("A");
+        get { return ++init; }
     }
 }
-public class B : A
-{
-    public override void Print1()
-    {
-        Console.Write("B");
-    }
-}
-public class C : B
-{
-    new public void Print2()
-    {
-        Console.Write("C");
-    }
-}
+
+
