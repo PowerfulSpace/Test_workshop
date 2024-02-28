@@ -1,50 +1,35 @@
 ﻿
-using System.Diagnostics;
 
-var w = new Wrap();
-var wraps = new Wrap[3];
-for (int i = 0; i < wraps.Length; i++)
+
+object sync = new object();
+
+var thread = new Thread(() =>
 {
-    wraps[i] = w;
-}
+    try
+    {
+        Work();
+    }
+    finally
+    {
+        lock (sync)
+        {
+            Monitor.PulseAll(sync);
+        }
+    }
+});
+thread.Start();
 
-var values = wraps.Select(x => x.Value);
-
-var results = Square(values);
-int sum = 0;
-int count = 0;
-foreach (var r in results)
+lock (sync)
 {
-    count++;
-    sum += r;
+    Monitor.Wait(sync);
 }
-Console.WriteLine("Count {0}", count);
-Console.WriteLine("Sum {0}", sum);
-
-Console.WriteLine("Count {0}", results.Count());
-Console.WriteLine("Sum {0}", results.Sum());
+Console.WriteLine("test");
 
 
 Console.ReadLine();
 
 
-static IEnumerable<int> Square(IEnumerable<int> a)
+static void Work()
 {
-    foreach (var r in a)
-    {
-        Console.WriteLine(r * r);
-        yield return r * r;
-    }
+    Thread.Sleep(1000);
 }
-
-class Wrap
-{
-    private static int init = 0;
-
-    public int Value
-    {
-        get { return ++init; }
-    }
-}
-
-
