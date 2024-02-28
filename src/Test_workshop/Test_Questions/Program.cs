@@ -1,19 +1,7 @@
 ﻿
 
-try
-{
-    Calc();
-}
-catch (MyCustomException e)
-{
-    Console.WriteLine("Catch MyCustomException");
-    throw;
-}
-catch (DivideByZeroException e)
-{
-    Console.WriteLine("Catch Exception");
-}
-Console.ReadLine();
+
+Console.WriteLine((int)En.Second);
 
 
 
@@ -21,35 +9,9 @@ Console.ReadLine();
 
 
 
-static void Calc()
+enum En
 {
-    int result = 0;
-    var x = 5;
-    int y = 0;
-    try
-    {
-        result = x / y;
-    }
-    catch (MyCustomException e)
-    {
-        Console.WriteLine("Catch DivideByZeroException");
-        throw;
-    }
-    catch (Exception e)
-    {
-        Console.WriteLine("Catch Exception");
-    }
-    finally
-    {
-        throw new MyCustomException();
-    }
+    First = 15,
+    Second,
+    Third = 54
 }
-
-
-
-
-class MyCustomException : DivideByZeroException
-{
-
-}
-
