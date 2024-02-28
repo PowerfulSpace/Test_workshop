@@ -2,25 +2,42 @@
 
 
 
+var test = new Test();
 try
 {
-    var array = new int[] { 1, 2 };
-    Console.Write(array[5]);
+    test.Print();
 }
-catch (ApplicationException e)
+catch (Exception)
 {
-    Console.Write(1);
+    Console.Write("5");
 }
-catch (SystemException e)
+finally
 {
-    Console.Write(2);
+    Console.Write("4");
 }
-catch (Exception e)
-{
-    Console.Write(3);
-}
+
+
 
 Console.ReadLine();
 
 
 
+class Test
+{
+    public void Print()
+    {
+        try
+        {
+            throw new Exception();
+        }
+        catch (Exception)
+        {
+            Console.Write("9");
+            throw new Exception();
+        }
+        finally
+        {
+            Console.Write("2");
+        }
+    }
+}
