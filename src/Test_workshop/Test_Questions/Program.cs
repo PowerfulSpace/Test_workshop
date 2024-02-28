@@ -1,17 +1,17 @@
 ﻿
 
 
-Console.WriteLine((int)En.Second);
-
+int c = 3;
+Console.Write(Sum(5, 3, out c) + " ");
+Console.Write(c);
+Console.ReadLine();
 
 
 Console.ReadLine();
 
 
 
-enum En
+static int Sum(int a, int b, out int c)
 {
-    First = 15,
-    Second,
-    Third = 54
+    return a + b;
 }
