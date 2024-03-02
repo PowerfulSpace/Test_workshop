@@ -22,15 +22,15 @@ class Класс
         {
             if (a[0] == 1)
             {
-                Console.WriteLine();
+                Console.WriteLine("Элемент равен 1 в массиве");
             }
             else if (a[0] == 2)
             {
-
+                Console.WriteLine("Элемент равен 2 в массиве");
             }
             else
             {
-
+                Console.WriteLine("Ни чего не знаю");
             }
         }
     }
