@@ -17,3 +17,4 @@ Console.WriteLine($"Факториал числа 6 = {factorial6}");
 
 Console.ReadLine();
 
+//Дописать ещё вариант 
