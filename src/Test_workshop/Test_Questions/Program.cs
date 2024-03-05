@@ -19,7 +19,7 @@ abstract class TestClass
 
 
 
-    public TestClass this[int index]
+    public Person this[int index]
     {
         get => personal[index];
         set => personal[index] = value;
