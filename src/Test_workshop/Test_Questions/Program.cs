@@ -9,7 +9,6 @@ abstract class TestClass
 {
     Person[] personal;
     private int IdA;
-    abstract private int IdB;
 
     public int MyPropertyA { get; set; }
     abstract public int MyPropertyB { get; set; }
