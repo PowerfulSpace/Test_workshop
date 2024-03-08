@@ -13,8 +13,7 @@ Console.ReadLine();
 interface Test2
 {
     public static int MyProperty { get; set; }
-    public int MyProperty1 { get; set; }
-    //private int MyProperty2 { get; set; }
+
 
 
 
