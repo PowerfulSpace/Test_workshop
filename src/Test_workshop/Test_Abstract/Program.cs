@@ -18,7 +18,7 @@ interface Test2
     protected int MyProperty3 { get; set; }
     private protected int MyProperty4 { get; set; }
     internal int MyProperty5 { get; set; }
-    protected internal int MyProperty6 { get; set; }
+   
 
     //public readonly int value;
 
