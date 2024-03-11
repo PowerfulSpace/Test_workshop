@@ -15,3 +15,15 @@ int GetNumber(int[] values) => values switch
 
 
 Console.ReadLine();
+
+class C
+{
+    [Reader<int>]
+    public void M()
+    {
+    }
+}
+
+class ReaderAttribute<T> : Attribute
+{
+}
