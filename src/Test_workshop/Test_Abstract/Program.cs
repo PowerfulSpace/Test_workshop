@@ -1,15 +1,6 @@
 ﻿
 
 
-
-
-
-Console.ReadLine();
-
-
-
-
-
 interface Test2
 {
     public const int a = 1;
