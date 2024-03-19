@@ -9,6 +9,9 @@ welcome("hello world"); // hello world
 welcome();              // hello
 
 
+
+
+
 Console.ReadLine();
 
 
@@ -18,3 +21,7 @@ void Increment(ref readonly int n)
     Console.WriteLine($"Число в методе Increment: {n}");
 }
 
+class Person
+{
+
+}
