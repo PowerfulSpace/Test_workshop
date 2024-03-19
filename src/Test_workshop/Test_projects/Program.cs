@@ -9,7 +9,6 @@ welcome("hello world"); // hello world
 welcome();              // hello
 
 
-Person a;
 
 
 Console.ReadLine();
