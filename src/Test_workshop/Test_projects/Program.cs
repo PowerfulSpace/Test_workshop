@@ -14,9 +14,35 @@ Console.WriteLine(GetNumber(new[] { 2, 3, 4, 5 }));     // 3
 Console.WriteLine(GetNumber(new[] { 1, 2, 3 }));        // 4
 Console.WriteLine(GetNumber(new int[] { }));            // 4
 
+Print();
+PrintValue("hello");
+
 
 Console.ReadLine();
 
+
+void Print()
+{
+    string text = """
+              <element attr="content">
+                <body>
+                </body>
+              </element>
+              """;
+    Console.WriteLine(text);
+}
+
+void PrintValue(string val)
+{
+    string text = $"""
+              <element attr="content">
+                <body>
+                {val}
+                </body>
+              </element>
+              """;
+    Console.WriteLine(text);
+}
 
 int GetNumber(int[] values) => values switch
 {
@@ -37,3 +63,6 @@ class C
 class ReaderAttribute<T> : Attribute
 {
 }
+
+
+ 
