@@ -60,9 +60,5 @@ class C
     }
 }
 
-class ReaderAttribute<T> : Attribute
-{
-}
-
 
  
