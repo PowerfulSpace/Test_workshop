@@ -25,3 +25,15 @@ int GetNumber(int[] values) => values switch
     [2, .., 5] => 3,
     [..] => 4
 };
+
+class C
+{
+    [Reader<int>]
+    public void M()
+    {
+    }
+}
+
+class ReaderAttribute<T> : Attribute
+{
+}
