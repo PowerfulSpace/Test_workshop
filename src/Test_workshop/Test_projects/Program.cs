@@ -52,13 +52,6 @@ int GetNumber(int[] values) => values switch
     [..] => 4
 };
 
-class C
-{
-    [Reader<int>]
-    public void M()
-    {
-    }
-}
 
 
  
