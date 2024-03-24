@@ -26,17 +26,7 @@ Console.ReadLine();
 
 
 
-void PrintValue(string val)
-{
-    string text = $"""
-              <element attr="content">
-                <body>
-                {val}
-                </body>
-              </element>
-              """;
-    Console.WriteLine(text);
-}
+
 
 int GetNumber(int[] values) => values switch
 {
