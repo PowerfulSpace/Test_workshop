@@ -28,13 +28,6 @@ Console.ReadLine();
 
 
 
-int GetNumber(int[] values) => values switch
-{
-    [2, 3, 5] => 1,
-    [2, _, 5] => 2,
-    [2, .., 5] => 3,
-    [..] => 4
-};
 
 
 
