@@ -18,6 +18,16 @@ Print();
 PrintValue("hello");
 
 
+Enumerable.Range(1, 10).ElementAt(^2); // 9
+
+source.Take(..3); //вместо source.Take(3)
+source.Take(3..); // вместо source.Skip(3)
+source.Take(2..7); // вместо source.Take(7).Skip(2)
+source.Take(^3..); // вместо source.TakeLast(3)
+source.Take(..^3); // вместо source.SkipLast(3)
+source.Take(^7..^3); // вместо source.TakeLast(7).SkipLast(3).
+
+
 Console.ReadLine();
 
 
