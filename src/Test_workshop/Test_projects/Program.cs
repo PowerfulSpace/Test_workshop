@@ -24,16 +24,7 @@ PrintValue("hello");
 Console.ReadLine();
 
 
-void Print()
-{
-    string text = """
-              <element attr="content">
-                <body>
-                </body>
-              </element>
-              """;
-    Console.WriteLine(text);
-}
+
 
 void PrintValue(string val)
 {
