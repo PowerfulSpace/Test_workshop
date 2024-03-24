@@ -1,4 +1,6 @@
-﻿
+﻿global using System;
+global using static System.Console;
+global using Env = System.Environment;
 using System.Text.Json;
 
 
