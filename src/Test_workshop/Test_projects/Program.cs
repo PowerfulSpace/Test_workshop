@@ -4,9 +4,6 @@ global using Env = System.Environment;
 using System.Net;
 using System.Text.Json;
 
-
-
-
 using Stream stream = Console.OpenStandardOutput();
 var data = new { Data = PrintNumbers(3) };
 await JsonSerializer.SerializeAsync(stream, data); // {"Data":[0,1,2]}
@@ -17,14 +14,7 @@ var handler = new HttpClientHandler
 };
 var httpClient = new HttpClient(handler);
 
-
-
-
 Console.ReadLine();
-
-
-
-
 
 static async IAsyncEnumerable<int> PrintNumbers(int n)
 {
