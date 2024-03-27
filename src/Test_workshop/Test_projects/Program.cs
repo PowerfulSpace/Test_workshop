@@ -4,7 +4,7 @@ using System.Text.Json;
 
 using Stream stream = Console.OpenStandardOutput();
 var data = new { Data = PrintNumbers(3) };
-await JsonSerializer.SerializeAsync(stream, data); // {"Data":[0,1,2]}
+await JsonSerializer.SerializeAsync(stream, data);
 
 var handler = new HttpClientHandler
 {
