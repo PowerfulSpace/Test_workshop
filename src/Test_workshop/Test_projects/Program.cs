@@ -18,9 +18,3 @@ static async IAsyncEnumerable<int> PrintNumbers(int n)
 {
     for (int i = 0; i < n; i++) yield return i;
 }
-
-
-
-
-
-
