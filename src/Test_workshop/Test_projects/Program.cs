@@ -1,5 +1,4 @@
-﻿global using System;
-using System.Net;
+﻿using System.Net;
 using System.Text.Json;
 
 using Stream stream = Console.OpenStandardOutput();
