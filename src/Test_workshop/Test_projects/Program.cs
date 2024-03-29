@@ -7,7 +7,8 @@ await JsonSerializer.SerializeAsync(stream, data);
 
 var handler = new HttpClientHandler
 {
-    Proxy = new WebProxy("socks5://127.0.0.1", 9050)
+    //Proxy = new WebProxy("socks5://127.0.0.1", 9050)
+    Proxy = new WebProxy("socks5://127.0.0.1", 9060)
 };
 var httpClient = new HttpClient(handler);
 
