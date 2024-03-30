@@ -6,8 +6,6 @@
 //If there is no mode return -1. The array will not be empty.
 
 
-
-
 using System.Text;
 
 int num = 439810382;
