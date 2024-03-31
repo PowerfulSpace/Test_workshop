@@ -54,5 +54,3 @@ foreach (var item in chars)
 Console.WriteLine(stringBuilder.ToString());
 
 Console.ReadLine();
-
-
