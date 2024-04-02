@@ -70,9 +70,6 @@ Console.ReadLine();
 #endregion
 
 
-
-
-
 #region Задачки для понимания строк 1
 
 
