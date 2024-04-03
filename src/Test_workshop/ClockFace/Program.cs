@@ -27,5 +27,3 @@ static int Test(int hour, int minutes)
 
     return result;
 }
-
-
