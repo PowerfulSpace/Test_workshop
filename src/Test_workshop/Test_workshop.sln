@@ -69,7 +69,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_array", "Test_array\Te
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_projects", "Test_projects\Test_projects.csproj", "{871CABBA-227D-42AE-A1B8-D2A49AD13B60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaceSymbolsBetweenNumbers", "PlaceSymbolsBetweenNumbers\PlaceSymbolsBetweenNumbers.csproj", "{36A1C72F-1012-4917-831C-C0687E865487}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlaceSymbolsBetweenNumbers", "PlaceSymbolsBetweenNumbers\PlaceSymbolsBetweenNumbers.csproj", "{36A1C72F-1012-4917-831C-C0687E865487}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyPriority", "KeyPriority\KeyPriority.csproj", "{99396170-7094-4E0F-8A7F-627F1585FB88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -209,6 +211,10 @@ Global
 		{36A1C72F-1012-4917-831C-C0687E865487}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36A1C72F-1012-4917-831C-C0687E865487}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36A1C72F-1012-4917-831C-C0687E865487}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99396170-7094-4E0F-8A7F-627F1585FB88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99396170-7094-4E0F-8A7F-627F1585FB88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99396170-7094-4E0F-8A7F-627F1585FB88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99396170-7094-4E0F-8A7F-627F1585FB88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
